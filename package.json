@@ -1,0 +1,19 @@
+{
+  "name": "FY-bold",
+  "version": "2.0.0",
+  "description": "Fast and Yours website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcelotena/FY-bold.git"
+  },
+  "author": "Marcelo Tena Vicente",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcelotena/FY-bold/issues"
+  },
+  "homepage": "https://github.com/marcelotena/FY-bold",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.3"
+  }
+}
