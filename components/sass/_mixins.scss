@@ -1,2 +1,21 @@
 // mixins.scss
 // ==================
+
+@mixin backImage($image) {
+    background: url($image) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}//backImage
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}//clearfix

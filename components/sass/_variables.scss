@@ -5,6 +5,13 @@
 
 @include border-box-sizing; //uses border box sizing like the old IE, i.e.: padding doesn't add to the total size of the element.
 
+$susy: (
+    columns: 12,
+    container: 60em,
+    gutters: 1/4,
+    gutter-position: inside
+);
+
 //Add Colour Palette
 $blue       : #0c00ed;
 $dark       : #000000;
@@ -21,5 +28,5 @@ $fontFamily: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $regular    : 400;
 $bold       : 700;
 
-$headFont   : $bold $fontFamily;
-$mainFont   : $regular $fontFamily;
+$headFont   : $bold 1.5em/1.5em $fontFamily;
+$mainFont   : $regular 1em/1.5em $fontFamily;

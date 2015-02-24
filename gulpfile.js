@@ -8,6 +8,7 @@ var gulp = require('gulp'),
 var jsSources = [
     //añade aquí archivos .js para concatenar en el script final
     //'components/scripts/*******.js'
+    'components/scripts/jqloader.js',
     'components/scripts/script.js'
 ];
 var sassSources = ['components/sass/styles.scss'];
@@ -38,6 +39,7 @@ gulp.task('default', ['js', 'compass', 'connect', 'watch']);
 gulp.task('watch', function() {
     gulp.watch(jsSources, ['js']);
     gulp.watch('components/sass/*.scss', ['compass']);
+    gulp.watch('components/sass/modules/*.scss', ['compass']);
 });
 
 gulp.task('connect', function() {

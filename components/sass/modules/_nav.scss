@@ -1,2 +1,21 @@
 // nav.scss
 // ==================
+
+header .navbar {
+    @include clearfix;
+    ul {
+        float: right;
+        padding-right: 5%;
+        a {
+            color: $light;
+            line-height: 2;
+            text-decoration: none;
+            font-size: 1.3em;
+        }//a
+        
+        .nav-extras a {
+            font-size: 0.8em;
+            line-height: 1;
+        }//nav-extras a
+    }//ul
+}//main-nav
