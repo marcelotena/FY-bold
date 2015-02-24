@@ -20,3 +20,6 @@ $fontFamily: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 $regular    : 400;
 $bold       : 700;
+
+$headFont   : $bold $fontFamily;
+$mainFont   : $regular $fontFamily;
