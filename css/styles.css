@@ -119,24 +119,43 @@ header .fullheight .scrolldown {
   text-align: center;
 }
 
-header .navbar:before, header .navbar:after {
+#main-nav {
+  display: none;
+}
+
+#pageslide {
+  background: #000000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#pageslide:before, #pageslide:after {
   content: '';
   display: table;
 }
-header .navbar:after {
+#pageslide:after {
   clear: both;
 }
-header .navbar ul {
-  float: right;
-  padding-right: 5%;
+#pageslide ul {
+  float: left;
+  padding: 15%;
 }
-header .navbar ul a {
+#pageslide ul a {
   color: #ffffff;
   line-height: 2;
   text-decoration: none;
   font-size: 1.3em;
 }
-header .navbar ul .nav-extras a {
+#pageslide ul .nav-extras a {
   font-size: 0.8em;
   line-height: 1;
+}
+
+.lateral {
+  background: url("../images/collapse.png");
+  display: block;
+  width: 49px;
+  height: 37px;
+  position: fixed;
+  top: 25px;
+  right: 25px;
 }

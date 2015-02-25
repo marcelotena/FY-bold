@@ -20,10 +20,10 @@ $(function() {
     $(window).resize(function() {
         var wheight = $(window).height(); //get height of the window
         $('.fullheight').css('height', wheight);
-    })
-});
+    });
 
-//PANEL LATERAL
-$('#main-nav').pullOutContentPanel(
-    
-);
+    //PANEL LATERAL
+    $(".lateral").pageslide({ direction: "left", modal: true });
+
+});//document ready
+

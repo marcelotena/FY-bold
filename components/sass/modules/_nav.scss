@@ -1,11 +1,18 @@
 // nav.scss
 // ==================
 
-header .navbar {
+#main-nav {
+    display: none;
+}
+
+#pageslide {
     @include clearfix;
+    background: $dark;
+    -webkit-box-shadow: none;
+    box-shadow: none;
     ul {
-        float: right;
-        padding-right: 5%;
+        float: left;
+        padding: 15%;
         a {
             color: $light;
             line-height: 2;
@@ -18,4 +25,14 @@ header .navbar {
             line-height: 1;
         }//nav-extras a
     }//ul
-}//main-nav
+}//pageslide
+
+.lateral {
+    background: url('../images/collapse.png');
+    display: block;
+    width: 49px;
+    height: 37px;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+}
