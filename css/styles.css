@@ -158,4 +158,8 @@ header .fullheight .scrolldown {
   position: fixed;
   top: 25px;
   right: 25px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }

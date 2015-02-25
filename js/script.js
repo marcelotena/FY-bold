@@ -48,7 +48,8 @@ var jQuery = $;
                 bodyAnimateIn["margin-left"] = "-=" + slideWidth;
                 slideAnimateIn["right"] = "+=" + slideWidth;
                 $('.lateral').css({
-                    right: slideWidth+25 + "px"
+                    right: slideWidth + "px",
+                    background: 'url(../images/cross-white.png) no-repeat'
                 });
                 break;
             default:
@@ -118,6 +119,10 @@ var jQuery = $;
             case "left":
                 bodyAnimateIn["margin-left"] = "+=" + slideWidth;
                 slideAnimateIn["right"] = "-=" + slideWidth;
+                $('.lateral').css({
+                    right: 25 + "px",
+                    background: 'url(../images/collapse.png) no-repeat'
+                });
                 break;
             default:
                 bodyAnimateIn["margin-left"] = "-=" + slideWidth;
