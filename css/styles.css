@@ -115,8 +115,13 @@ header .fullheight h1 {
   padding: 100px 0;
   margin-bottom: 100px;
 }
+header .fullheight .welcome-msg {
+  position: relative;
+  top: 200px;
+}
 header .fullheight .scrolldown {
   text-align: center;
+  position: relative;
 }
 
 #main-nav {
@@ -145,9 +150,22 @@ header .fullheight .scrolldown {
   text-decoration: none;
   font-size: 1.3em;
 }
-#pageslide ul .nav-extras a {
+#pageslide ul .nav-extras ul {
+  padding: 15px 0;
+}
+#pageslide ul .nav-extras ul li {
+  padding: 3px 0;
+}
+#pageslide ul .nav-extras ul li a {
   font-size: 0.8em;
-  line-height: 1;
+}
+#pageslide ul .social ul {
+  padding: 0;
+  padding-top: 10px;
+}
+#pageslide ul .social ul li {
+  float: left;
+  padding-right: 15px;
 }
 
 .lateral {

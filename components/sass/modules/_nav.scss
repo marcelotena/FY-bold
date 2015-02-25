@@ -20,10 +20,24 @@
             font-size: 1.3em;
         }//a
         
-        .nav-extras a {
-            font-size: 0.8em;
-            line-height: 1;
+        .nav-extras ul {
+            padding: 15px 0;
+            li {
+                padding: 3px 0;
+                a {
+                    font-size: 0.8em;
+                }
+            }
         }//nav-extras a
+        
+        .social ul {
+            padding: 0;
+            padding-top: 10px;
+            li {
+                float: left;
+                padding-right: 15px;
+            }
+        }
     }//ul
 }//pageslide
 

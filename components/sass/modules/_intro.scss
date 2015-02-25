@@ -1,7 +1,7 @@
 // intro.scss
 // ==================
 
-header {    
+header { 
     .brand img {
         width: 80px;
         height: auto;
@@ -20,8 +20,14 @@ header {
             margin-bottom: 100px;
         }//h1
         
+        .welcome-msg {
+            position: relative;
+            top: 200px;
+        }
+        
         .scrolldown {
             text-align: center;
+            position: relative;
         }//scrolldown
     }//fullheight
 

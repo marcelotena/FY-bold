@@ -16,10 +16,14 @@ $(function() {
     var wheight = $(window).height(); //get height of the window
     
     $('.fullheight').css('height', wheight);
+    $('.welcome-msg').css('top', wheight/2-240);
+    $('.scrolldown').css('top', wheight/2-300);
     
     $(window).resize(function() {
         var wheight = $(window).height(); //get height of the window
         $('.fullheight').css('height', wheight);
+        $('.welcome-msg').css('top', wheight/2-240);
+        $('.scrolldown').css('top', wheight/2-300);
     });
 
     //PANEL LATERAL
