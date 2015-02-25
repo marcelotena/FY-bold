@@ -11,6 +11,7 @@
 	   document.write("<a href='mailto:" + dame_correo() + "'>" + dame_correo() + "</a>"); 
 	}
 
+//ADAPTAMOS ALTURA DE LA SECCIÓN SEGÚN LA PANTALLA
 $(function() {
     var wheight = $(window).height(); //get height of the window
     
@@ -21,3 +22,8 @@ $(function() {
         $('.fullheight').css('height', wheight);
     })
 });
+
+//PANEL LATERAL
+$('#main-nav').pullOutContentPanel(
+    
+);
