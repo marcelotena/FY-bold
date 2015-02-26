@@ -22,3 +22,14 @@ p {
     font-weight: $regular;
     padding-bottom: 10px;
 }
+
+.dft-btn {
+    font: $headFont;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: $light;
+    background: $dark;
+    border: none;
+    padding: 10px 20px;
+    @include border-radius(15px);
+}

@@ -68,7 +68,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font: 700 1.5em/1.5em "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 700 2em/2em "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #000000;
   font-weight: 700;
   text-align: center;
@@ -83,6 +83,19 @@ p {
   padding-bottom: 10px;
 }
 
+.dft-btn {
+  font: 700 2em/2em "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #000000;
+  border: none;
+  padding: 10px 20px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+}
+
 body {
   position: absolute;
   width: 100%;
@@ -91,6 +104,7 @@ body {
 
 .bloque {
   position: relative;
+  text-align: center;
   padding: 20px 0;
 }
 
@@ -184,4 +198,98 @@ header .fullheight .scrolldown {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+}
+
+#services {
+  max-width: 80em;
+  margin-left: auto;
+  margin-right: auto;
+}
+#services:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+#services h2 {
+  text-transform: uppercase;
+}
+#services #serviceslist {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+#services #serviceslist li {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 25%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  display: block;
+  float: left;
+  color: #0c00ed;
+}
+#services #serviceslist li a {
+  color: #0c00ed;
+}
+#services #serviceslist li .responsive-icon {
+  margin: 0 auto;
+  display: block;
+  width: 256px;
+  height: 256px;
+  background: url("../images/responsive-blue-md.png") no-repeat;
+}
+#services #serviceslist li .dev-icon {
+  margin: 0 auto;
+  display: block;
+  width: 256px;
+  height: 256px;
+  background: url("../images/dev-blue-md.png") no-repeat;
+}
+#services #serviceslist li .seo-icon {
+  margin: 0 auto;
+  display: block;
+  width: 256px;
+  height: 256px;
+  background: url("../images/seo-blue-md.png") no-repeat;
+}
+#services #serviceslist li .content-icon {
+  margin: 0 auto;
+  display: block;
+  width: 256px;
+  height: 256px;
+  background: url("../images/content-blue-md.png") no-repeat;
+}
+#services #serviceslist li p {
+  display: block;
+}
+@media (max-width: 1200px) {
+  #services #serviceslist li {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+}
+@media (max-width: 650px) {
+  #services #serviceslist li {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+}
+#services .dft-btn {
+  margin-top: 20px;
 }

@@ -1,2 +1,62 @@
 // services.scss
 // ==================
+
+#services {
+    @include container;
+    h2 {
+        text-transform: uppercase;
+    }
+    #serviceslist {
+        @include span(12);
+        li {
+            @include span(3);
+            display: block;
+            float: left;
+            color: $blue;
+            a {
+                color: $blue;
+            }
+            .responsive-icon {
+                margin: 0 auto;
+                display: block;
+                width: 256px;
+                height: 256px;
+                background: url('../images/responsive-blue-md.png') no-repeat;
+            }//responsive-icon
+            .dev-icon {
+                margin: 0 auto;
+                display: block;
+                width: 256px;
+                height: 256px;
+                background: url('../images/dev-blue-md.png') no-repeat;
+            }//dev-icon
+            .seo-icon {
+                margin: 0 auto;
+                display: block;
+                width: 256px;
+                height: 256px;
+                background: url('../images/seo-blue-md.png') no-repeat;
+            }//seo-icon
+            .content-icon {
+                margin: 0 auto;
+                display: block;
+                width: 256px;
+                height: 256px;
+                background: url('../images/content-blue-md.png') no-repeat;
+            }//content-icon
+            p {
+                display: block;
+            }
+            @include breakpoint(max-width $wide) {
+                @include span(6);
+            }
+            @include breakpoint(max-width $small) {
+                @include span(12);
+            }
+        }//li 
+    }//servicelist
+
+    .dft-btn {
+        margin-top: 20px;
+    }//workflow
+}

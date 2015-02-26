@@ -7,10 +7,17 @@
 
 $susy: (
     columns: 12,
-    container: 60em,
+    container: 80em,
     gutters: 1/4,
     gutter-position: inside
 );
+
+//Screen sizes
+$smallest   : 400px;
+$small      : 650px;
+$medium     : 960px;
+$wide       : 1200px;
+
 
 //Add Colour Palette
 $blue       : #0c00ed;
@@ -28,5 +35,5 @@ $fontFamily: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $regular    : 400;
 $bold       : 700;
 
-$headFont   : $bold 1.5em/1.5em $fontFamily;
+$headFont   : $bold 2em/2em $fontFamily;
 $mainFont   : $regular 1em/1.5em $fontFamily;
