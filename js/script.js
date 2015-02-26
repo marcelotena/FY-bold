@@ -57,11 +57,11 @@ var jQuery = $;
                     left: "-" + slideWidth + "px",
                     right: "auto"
                 });
-                bodyAnimateIn["margin-left"] = "+=" + slideWidth;
+                bodyAnimateIn["margin-left"] = "+=" + 0;//slideWidth cambiado por 0 para no desplazar
                 slideAnimateIn["left"] = "+=" + slideWidth;
                 break;
         }
-        $body.animate(bodyAnimateIn, speed);
+        //$body.animate(bodyAnimateIn, speed);
         $pageslide.show().animate(slideAnimateIn, speed, function() {
             _sliding = false;
         });
@@ -117,7 +117,7 @@ var jQuery = $;
         _sliding = true;
         switch ($pageslide.data("direction")) {
             case "left":
-                bodyAnimateIn["margin-left"] = "+=" + slideWidth;
+                bodyAnimateIn["margin-left"] = "+=" + 0;//slideWidth cambiado por 0 para no desplazar contenido
                 slideAnimateIn["right"] = "-=" + slideWidth;
                 $('.lateral').css({
                     right: 25 + "px",
@@ -125,7 +125,7 @@ var jQuery = $;
                 });
                 break;
             default:
-                bodyAnimateIn["margin-left"] = "-=" + slideWidth;
+                bodyAnimateIn["margin-left"] = "-=" + 0;//slideWidth cambiado por 0 para no desplazar contenido
                 slideAnimateIn["left"] = "-=" + slideWidth;
                 break;
         }
@@ -169,13 +169,20 @@ $(function() {
     
     $('.fullheight').css('height', wheight);
     $('.welcome-msg').css('top', wheight/2-240);
-    $('.scrolldown').css('top', wheight/2-300);
-    
+    $('.scrolldown').css('top', 0.5*wheight-250);
+    function bucle() {
+        $('.scrolldown')
+            .animate({'top': 0.5*wheight-250},800)
+            .animate({'top': 0.5*wheight-230},800, bucle);  
+    }
+    bucle();
+
     $(window).resize(function() {
         var wheight = $(window).height(); //get height of the window
         $('.fullheight').css('height', wheight);
         $('.welcome-msg').css('top', wheight/2-240);
-        $('.scrolldown').css('top', wheight/2-300);
+        $('.scrolldown').css('top', 0.5*wheight-250);
+        bucle();
     });
 
     //PANEL LATERAL

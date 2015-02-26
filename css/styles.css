@@ -120,8 +120,12 @@ header .fullheight .welcome-msg {
   top: 200px;
 }
 header .fullheight .scrolldown {
-  text-align: center;
   position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 32px;
+  height: 32px;
+  background: url("../images/down-white.png") no-repeat;
 }
 
 #main-nav {

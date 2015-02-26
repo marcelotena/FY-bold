@@ -17,13 +17,20 @@ $(function() {
     
     $('.fullheight').css('height', wheight);
     $('.welcome-msg').css('top', wheight/2-240);
-    $('.scrolldown').css('top', wheight/2-300);
-    
+    $('.scrolldown').css('top', 0.5*wheight-250);
+    function bucle() {
+        $('.scrolldown')
+            .animate({'top': 0.5*wheight-250},800)
+            .animate({'top': 0.5*wheight-230},800, bucle);  
+    }
+    bucle();
+
     $(window).resize(function() {
         var wheight = $(window).height(); //get height of the window
         $('.fullheight').css('height', wheight);
         $('.welcome-msg').css('top', wheight/2-240);
-        $('.scrolldown').css('top', wheight/2-300);
+        $('.scrolldown').css('top', 0.5*wheight-250);
+        bucle();
     });
 
     //PANEL LATERAL

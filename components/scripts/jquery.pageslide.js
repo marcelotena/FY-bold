@@ -54,11 +54,11 @@
                     left: "-" + slideWidth + "px",
                     right: "auto"
                 });
-                bodyAnimateIn["margin-left"] = "+=" + slideWidth;
+                bodyAnimateIn["margin-left"] = "+=" + 0;//slideWidth cambiado por 0 para no desplazar
                 slideAnimateIn["left"] = "+=" + slideWidth;
                 break;
         }
-        $body.animate(bodyAnimateIn, speed);
+        //$body.animate(bodyAnimateIn, speed);
         $pageslide.show().animate(slideAnimateIn, speed, function() {
             _sliding = false;
         });
@@ -114,7 +114,7 @@
         _sliding = true;
         switch ($pageslide.data("direction")) {
             case "left":
-                bodyAnimateIn["margin-left"] = "+=" + slideWidth;
+                bodyAnimateIn["margin-left"] = "+=" + 0;//slideWidth cambiado por 0 para no desplazar contenido
                 slideAnimateIn["right"] = "-=" + slideWidth;
                 $('.lateral').css({
                     right: 25 + "px",
@@ -122,7 +122,7 @@
                 });
                 break;
             default:
-                bodyAnimateIn["margin-left"] = "-=" + slideWidth;
+                bodyAnimateIn["margin-left"] = "-=" + 0;//slideWidth cambiado por 0 para no desplazar contenido
                 slideAnimateIn["left"] = "-=" + slideWidth;
                 break;
         }
