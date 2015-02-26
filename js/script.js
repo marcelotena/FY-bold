@@ -47,10 +47,17 @@ var jQuery = $;
                 });
                 bodyAnimateIn["margin-left"] = "-=" + slideWidth;
                 slideAnimateIn["right"] = "+=" + slideWidth;
-                $('.lateral').css({
-                    right: slideWidth + "px",
-                    background: 'url(./images/cross-white.png) no-repeat'
-                });
+                if ($('#menu-launch').hasClass('lightbackground')) {
+                    $('.lateral').css({
+                        right: slideWidth + "px",
+                        background: 'url(./images/cross.png) no-repeat'
+                    });   
+                }else{
+                    $('.lateral').css({
+                        right: slideWidth + "px",
+                        background: 'url(./images/cross-white.png) no-repeat'
+                    });
+                }
                 break;
             default:
                 $pageslide.css({
@@ -119,10 +126,17 @@ var jQuery = $;
             case "left":
                 bodyAnimateIn["margin-left"] = "+=" + 0;//slideWidth cambiado por 0 para no desplazar contenido
                 slideAnimateIn["right"] = "-=" + slideWidth;
-                $('.lateral').css({
-                    right: 25 + "px",
-                    background: 'url(./images/collapse.png) no-repeat'
-                });
+                if ($('#menu-launch').hasClass('lightbackground')) {
+                    $('.lateral').css({
+                        right: 25 + "px",
+                        background: 'url(./images/collapse-dark.png) no-repeat'
+                    });
+                }else{
+                    $('.lateral').css({
+                        right: 25 + "px",
+                        background: 'url(./images/collapse.png) no-repeat'
+                    });
+                }
                 break;
             default:
                 bodyAnimateIn["margin-left"] = "-=" + 0;//slideWidth cambiado por 0 para no desplazar contenido
@@ -150,7 +164,8 @@ var jQuery = $;
         }
     });
 })(jQuery);
-//GENERADOR DE EMAIL CON LINK "MAILTO"	
+$(function() {
+    //GENERADOR DE EMAIL CON LINK "MAILTO"	
     usuario="info";
 	dominio="fastandyours.com";
 	conector="@";
@@ -162,9 +177,8 @@ var jQuery = $;
 	function escribe_enlace_correo(){ 
 	   document.write("<a href='mailto:" + dame_correo() + "'>" + dame_correo() + "</a>"); 
 	}
-
-//ADAPTAMOS ALTURA DE LA SECCIÓN SEGÚN LA PANTALLA
-$(function() {
+    
+    //ADAPTAMOS ALTURA DE LA SECCIÓN SEGÚN LA PANTALLA
     var wheight = $(window).height(); //get height of the window
     
     $('.fullheight').css('height', wheight);
@@ -176,6 +190,8 @@ $(function() {
             .animate({'top': 0.5*wheight-230},800, bucle);  
     }
     bucle();
+    
+    $('#workflow').css('height', wheight-545);
 
     $(window).resize(function() {
         var wheight = $(window).height(); //get height of the window
@@ -187,6 +203,31 @@ $(function() {
 
     //PANEL LATERAL
     $(".lateral").pageslide({ direction: "left", modal: true });
+
+    
+    //FUNCION SCROLL
+    $(window).scroll(function() {
+        var windowpos = $(window).scrollTop();
+        if (windowpos >= $('#services').offset().top-31) {
+            $('#menu-launch').addClass('lightbackground');
+        }else{
+            $('#menu-launch').removeClass('lightbackground');
+        }
+        
+        //COMPROBAMOS SI EL LANZADOR DE MENÚ TIENE EL BACKGROUND CORRECTO
+    if ($('#menu-launch').hasClass('lightbackground')) {
+        $('.lateral').css({
+            background: 'url(./images/collapse-dark.png) no-repeat'
+        });
+    }else{
+        $('.lateral').css({
+            background: 'url(./images/collapse.png) no-repeat'
+        });
+    }
+        
+    });
+    
+
 
 });//document ready
 

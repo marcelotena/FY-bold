@@ -44,10 +44,17 @@
                 });
                 bodyAnimateIn["margin-left"] = "-=" + slideWidth;
                 slideAnimateIn["right"] = "+=" + slideWidth;
-                $('.lateral').css({
-                    right: slideWidth + "px",
-                    background: 'url(./images/cross-white.png) no-repeat'
-                });
+                if ($('#menu-launch').hasClass('lightbackground')) {
+                    $('.lateral').css({
+                        right: slideWidth + "px",
+                        background: 'url(./images/cross.png) no-repeat'
+                    });   
+                }else{
+                    $('.lateral').css({
+                        right: slideWidth + "px",
+                        background: 'url(./images/cross-white.png) no-repeat'
+                    });
+                }
                 break;
             default:
                 $pageslide.css({
@@ -116,10 +123,17 @@
             case "left":
                 bodyAnimateIn["margin-left"] = "+=" + 0;//slideWidth cambiado por 0 para no desplazar contenido
                 slideAnimateIn["right"] = "-=" + slideWidth;
-                $('.lateral').css({
-                    right: 25 + "px",
-                    background: 'url(./images/collapse.png) no-repeat'
-                });
+                if ($('#menu-launch').hasClass('lightbackground')) {
+                    $('.lateral').css({
+                        right: 25 + "px",
+                        background: 'url(./images/collapse-dark.png) no-repeat'
+                    });
+                }else{
+                    $('.lateral').css({
+                        right: 25 + "px",
+                        background: 'url(./images/collapse.png) no-repeat'
+                    });
+                }
                 break;
             default:
                 bodyAnimateIn["margin-left"] = "-=" + 0;//slideWidth cambiado por 0 para no desplazar contenido

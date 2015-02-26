@@ -97,6 +97,7 @@ p {
 }
 
 body {
+  background: #ffffff;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -136,6 +137,7 @@ header .fullheight .welcome-msg {
 header .fullheight .scrolldown {
   position: relative;
   display: block;
+  top: 500px;
   margin: 0 auto;
   width: 32px;
   height: 32px;
@@ -200,8 +202,18 @@ header .fullheight .scrolldown {
   transition: all 0.25s ease-in-out;
 }
 
+.lightbackground {
+  background: url("../images/collapse-dark.png");
+  z-index: 999999;
+}
+
+#menu-launch {
+  width: 50px;
+  height: 50px;
+}
+
 #services {
-  max-width: 80em;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -217,10 +229,12 @@ header .fullheight .scrolldown {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 100%;
+  width: 91.66667%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
+  float: none;
+  margin: 0 auto;
 }
 #services #serviceslist li {
   -moz-box-sizing: border-box;
@@ -291,5 +305,11 @@ header .fullheight .scrolldown {
   }
 }
 #services .dft-btn {
-  margin-top: 20px;
+  margin: 30px;
+}
+#services #workflow {
+  position: absolute;
+  display: block;
+  width: 100%;
+  background: #e5e5e5;
 }

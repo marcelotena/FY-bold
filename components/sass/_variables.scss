@@ -7,7 +7,6 @@
 
 $susy: (
     columns: 12,
-    container: 80em,
     gutters: 1/4,
     gutter-position: inside
 );
@@ -26,8 +25,9 @@ $light      : #ffffff;
 $yellow     : #fad53f;
 $gray       : #e5e5e5;
 
-$navBackground  : $dark;
-$navColour      : $light;
+$backgroundColour   : $light;
+$navBackground      : $dark;
+$navColour          : $light;
 
 //Font variables
 $fontFamily: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;

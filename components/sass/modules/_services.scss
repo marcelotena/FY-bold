@@ -7,7 +7,9 @@
         text-transform: uppercase;
     }
     #serviceslist {
-        @include span(12);
+        @include span(11);
+        float: none;
+        margin: 0 auto;
         li {
             @include span(3);
             display: block;
@@ -57,6 +59,13 @@
     }//servicelist
 
     .dft-btn {
-        margin-top: 20px;
-    }//workflow
+        margin: 30px;
+    }//workflow button
+    
+    #workflow {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background: $gray;
+    }
 }
