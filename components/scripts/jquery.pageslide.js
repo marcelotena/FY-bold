@@ -46,7 +46,7 @@
                 slideAnimateIn["right"] = "+=" + slideWidth;
                 $('.lateral').css({
                     right: slideWidth + "px",
-                    background: 'url(../images/cross-white.png) no-repeat'
+                    background: 'url(./images/cross-white.png) no-repeat'
                 });
                 break;
             default:
@@ -118,7 +118,7 @@
                 slideAnimateIn["right"] = "-=" + slideWidth;
                 $('.lateral').css({
                     right: 25 + "px",
-                    background: 'url(../images/collapse.png) no-repeat'
+                    background: 'url(./images/collapse.png) no-repeat'
                 });
                 break;
             default:
