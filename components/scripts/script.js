@@ -25,7 +25,7 @@ $(function() {
     }
     bucle();
     
-    $('#workflow').css('height', wheight-545);
+    $('#workflow').css('height', wheight-560);
 
     $(window).resize(function() {
         var wheight = $(window).height(); //get height of the window

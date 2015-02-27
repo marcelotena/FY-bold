@@ -7,7 +7,10 @@
         text-transform: uppercase;
     }
     #serviceslist {
-        @include span(11);
+        @include span(10);
+        @include breakpoint(max-width 1500px){
+            @include span(12);
+        }
         float: none;
         margin: 0 auto;
         li {
@@ -15,8 +18,9 @@
             display: block;
             float: left;
             color: $blue;
-            a {
+            a, h3 {
                 color: $blue;
+                font: $mainFont;
             }
             .responsive-icon {
                 margin: 0 auto;
@@ -67,5 +71,35 @@
         display: block;
         width: 100%;
         background: $gray;
+        .triangulo {
+            display: block;
+            margin: 0 auto;
+            border-width: 25px 25px 0;
+            border-color: $light transparent;
+            border-style: solid;
+            width: 0;
+            height: 0;
+        }
+        ul {
+            @include span(10);
+            @include breakpoint(max-width 1500px){
+                @include span(12);
+            }
+            float: none;
+            margin: 0 auto;
+            margin-top: 40px;
+            background: $gray;
+            li {
+                @include span(4);
+                display: block;
+                float: left;
+                text-align: left;
+                padding: 0 20px;
+                #{headings()} {
+                    font-size: 1.5em;
+                    text-align: left;
+                }
+            }
+        }
     }
 }

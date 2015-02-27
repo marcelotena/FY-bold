@@ -229,12 +229,23 @@ header .fullheight .scrolldown {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 91.66667%;
+  width: 83.33333%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
   float: none;
   margin: 0 auto;
+}
+@media (max-width: 1500px) {
+  #services #serviceslist {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
 }
 #services #serviceslist li {
   -moz-box-sizing: border-box;
@@ -248,8 +259,9 @@ header .fullheight .scrolldown {
   float: left;
   color: #0c00ed;
 }
-#services #serviceslist li a {
+#services #serviceslist li a, #services #serviceslist li h3 {
   color: #0c00ed;
+  font: 400 1em/1.5em "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #services #serviceslist li .responsive-icon {
   margin: 0 auto;
@@ -312,4 +324,54 @@ header .fullheight .scrolldown {
   display: block;
   width: 100%;
   background: #e5e5e5;
+}
+#services #workflow .triangulo {
+  display: block;
+  margin: 0 auto;
+  border-width: 25px 25px 0;
+  border-color: #ffffff transparent;
+  border-style: solid;
+  width: 0;
+  height: 0;
+}
+#services #workflow ul {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 83.33333%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  float: none;
+  margin: 0 auto;
+  margin-top: 40px;
+  background: #e5e5e5;
+}
+@media (max-width: 1500px) {
+  #services #workflow ul {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+}
+#services #workflow ul li {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.33333%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  display: block;
+  float: left;
+  text-align: left;
+  padding: 0 20px;
+}
+#services #workflow ul li h1, #services #workflow ul li h2, #services #workflow ul li h3, #services #workflow ul li h4, #services #workflow ul li h5, #services #workflow ul li h6 {
+  font-size: 1.5em;
+  text-align: left;
 }
