@@ -179,25 +179,33 @@ $(function() {
 	}
     
     //ADAPTAMOS ALTURA DE LA SECCIÓN SEGÚN LA PANTALLA
-    var wheight = $(window).height(); //get height of the window
+    var wheight = $(window).height(), //get height of the window
+        wwidth = $(window).width(); //get window width
     
     $('.fullheight').css('height', wheight);
     $('.welcome-msg').css('top', wheight/2-240);
-    $('.scrolldown').css('top', 0.5*wheight-250);
+    $('.scrolldown').css('top', 0.5*wheight+70);
+    $('.scrolldown').css('left', 0.5*wwidth-32);
+    if (wheight < 900) {
+        $('#workflow').css('height', 350);
+    } else {
+        $('#workflow').css('height', wheight-560);
+    }
     function bucle() {
         $('.scrolldown')
-            .animate({'top': 0.5*wheight-250},800)
-            .animate({'top': 0.5*wheight-230},800, bucle);  
+            .animate({'top': 0.5*wheight+70},800)
+            .animate({'top': 0.5*wheight+80},800, bucle);  
     }
     bucle();
-    
-    $('#workflow').css('height', wheight-560);
+
 
     $(window).resize(function() {
-        var wheight = $(window).height(); //get height of the window
+        var wheight = $(window).height(), //get height of the window
+        wwidth = $(window).width(); //get window width
         $('.fullheight').css('height', wheight);
         $('.welcome-msg').css('top', wheight/2-240);
-        $('.scrolldown').css('top', 0.5*wheight-250);
+        $('.scrolldown').css('top', 0.5*wheight+70);
+        $('.scrolldown').css('left', 0.5*wwidth-32);
         bucle();
     });
 

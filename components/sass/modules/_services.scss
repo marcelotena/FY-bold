@@ -2,7 +2,6 @@
 // ==================
 
 #services {
-    @include container;
     h2 {
         text-transform: uppercase;
     }
@@ -67,7 +66,6 @@
     }//workflow button
     
     #workflow {
-        position: absolute;
         display: block;
         width: 100%;
         background: $gray;

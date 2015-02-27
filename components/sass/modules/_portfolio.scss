@@ -1,2 +1,6 @@
 // portfolio.scss
 // ==================
+
+#portfolio {
+    @include clearfix;
+}

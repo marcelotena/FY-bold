@@ -42,7 +42,7 @@
 }//pageslide
 
 .lateral {
-    background: url('../images/collapse.png');
+    background: url('../images/collapse.png') no-repeat;
     display: block;
     width: 49px;
     height: 37px;
@@ -56,7 +56,7 @@
 }
 
 .lightbackground {
-    background: url('../images/collapse-dark.png');
+    background: url('../images/collapse-dark.png') no-repeat;
     z-index: 999999;
 }
 
