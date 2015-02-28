@@ -6,7 +6,7 @@
     if ($pageslide.length == 0) {
         $pageslide = $("<div />").attr("id", "pageslide").css("display", "none").appendTo($("body"));
     }
-
+    
     function _load(url, useIframe) {
         if (url.indexOf("#") === 0) {
             $(url).clone(true).appendTo($pageslide.empty()).show();
@@ -44,6 +44,7 @@
                 });
                 bodyAnimateIn["margin-left"] = "-=" + slideWidth;
                 slideAnimateIn["right"] = "+=" + slideWidth;
+                $('#menu-launch').addClass('abierto');
                 if ($('#menu-launch').hasClass('lightbackground')) {
                     $('.lateral').css({
                         right: slideWidth + "px",
@@ -123,6 +124,7 @@
             case "left":
                 bodyAnimateIn["margin-left"] = "+=" + 0;//slideWidth cambiado por 0 para no desplazar contenido
                 slideAnimateIn["right"] = "-=" + slideWidth;
+                $('#menu-launch').removeClass('abierto');
                 if ($('#menu-launch').hasClass('lightbackground')) {
                     $('.lateral').css({
                         right: 25 + "px",

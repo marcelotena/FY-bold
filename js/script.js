@@ -9,7 +9,7 @@ var jQuery = $;
     if ($pageslide.length == 0) {
         $pageslide = $("<div />").attr("id", "pageslide").css("display", "none").appendTo($("body"));
     }
-
+    
     function _load(url, useIframe) {
         if (url.indexOf("#") === 0) {
             $(url).clone(true).appendTo($pageslide.empty()).show();
@@ -47,6 +47,7 @@ var jQuery = $;
                 });
                 bodyAnimateIn["margin-left"] = "-=" + slideWidth;
                 slideAnimateIn["right"] = "+=" + slideWidth;
+                $('#menu-launch').addClass('abierto');
                 if ($('#menu-launch').hasClass('lightbackground')) {
                     $('.lateral').css({
                         right: slideWidth + "px",
@@ -126,6 +127,7 @@ var jQuery = $;
             case "left":
                 bodyAnimateIn["margin-left"] = "+=" + 0;//slideWidth cambiado por 0 para no desplazar contenido
                 slideAnimateIn["right"] = "-=" + slideWidth;
+                $('#menu-launch').removeClass('abierto');
                 if ($('#menu-launch').hasClass('lightbackground')) {
                     $('.lateral').css({
                         right: 25 + "px",
@@ -182,10 +184,12 @@ $(function() {
     var wheight = $(window).height(), //get height of the window
         wwidth = $(window).width(); //get window width
     
-    $('.fullheight').css('height', wheight);
-    $('.welcome-msg').css('top', wheight/2-240);
-    $('.scrolldown').css('top', 0.5*wheight+70);
-    $('.scrolldown').css('left', 0.5*wwidth-32);
+    if (wwidth>=1200) {
+        $('.fullheight').css('height', wheight);
+        $('.welcome-msg').css('top', wheight/2-240);
+        $('.scrolldown').css('top', 0.5*wheight+70);
+        $('.scrolldown').css('left', 0.5*wwidth-32);
+    }
     if (wheight < 900) {
         $('#workflow').css('height', 350);
     } else {
@@ -202,36 +206,59 @@ $(function() {
     $(window).resize(function() {
         var wheight = $(window).height(), //get height of the window
         wwidth = $(window).width(); //get window width
-        $('.fullheight').css('height', wheight);
-        $('.welcome-msg').css('top', wheight/2-240);
-        $('.scrolldown').css('top', 0.5*wheight+70);
-        $('.scrolldown').css('left', 0.5*wwidth-32);
+        if (wwidth>=1200) {
+            $('.fullheight').css('height', wheight);
+            $('.welcome-msg').css('top', wheight/2-240);
+            $('.scrolldown').css('top', 0.5*wheight+70);
+            $('.scrolldown').css('left', 0.5*wwidth-32);
+        }
         bucle();
     });
 
     //PANEL LATERAL
     $(".lateral").pageslide({ direction: "left", modal: true });
-
+    
     
     //FUNCION SCROLL
     $(window).scroll(function() {
         var windowpos = $(window).scrollTop();
         if (windowpos >= $('#services').offset().top-31) {
             $('#menu-launch').addClass('lightbackground');
+            $('#brand-dark').css({
+                opacity: '0.5',
+                display: 'block'
+            });
         }else{
             $('#menu-launch').removeClass('lightbackground');
+            $('#brand-dark').css({
+                opacity: '0',
+                display: 'none'
+            });
         }
         
-        //COMPROBAMOS SI EL LANZADOR DE MENÚ TIENE EL BACKGROUND CORRECTO
-    if ($('#menu-launch').hasClass('lightbackground')) {
-        $('.lateral').css({
-            background: 'url(./images/collapse-dark.png) no-repeat'
-        });
-    }else{
-        $('.lateral').css({
-            background: 'url(./images/collapse.png) no-repeat'
-        });
-    }
+        //COMPROBAMOS SI SE HA ABIERTO EL MENÚ O SI ESTAMOS EN FONDO CLARO/OSCURO
+        var abierto = $('#menu-launch').hasClass('abierto');
+        var fondoClaro = $('#menu-launch').hasClass('lightbackground');
+        if ((fondoClaro)&&(!abierto)) {
+                    $('.lateral').css({
+                        background: 'url(./images/collapse-dark.png) no-repeat'
+                    });   
+                }
+        if ((fondoClaro)&&(abierto)) {
+                    $('.lateral').css({
+                        background: 'url(./images/cross.png) no-repeat'
+                    });   
+                }
+        if (!(fondoClaro)&&(!abierto)) {
+                    $('.lateral').css({
+                        background: 'url(./images/collapse.png) no-repeat'
+                    });   
+                }
+        if (!(fondoClaro)&&(abierto)) {
+                    $('.lateral').css({
+                        background: 'url(./images/cross-white.png) no-repeat'
+                    });   
+                }
         
     });
     

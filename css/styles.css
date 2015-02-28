@@ -206,11 +206,7 @@ header .fullheight .scrolldown {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-}
-
-.lightbackground {
-  background: url("../images/collapse-dark.png") no-repeat;
-  z-index: 999999;
+  z-index: 99999;
 }
 
 #menu-launch {
@@ -218,6 +214,26 @@ header .fullheight .scrolldown {
   height: 50px;
 }
 
+#services #brand-dark {
+  position: fixed;
+  display: none;
+  left: 20px;
+  top: 20px;
+  width: 80px;
+  height: 51px;
+  background: url("../images/logo-dark.png") no-repeat;
+  background-size: 80px 51px;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  z-index: 99999;
+}
+@media (max-width: 960px) {
+  #services #brand-dark {
+    display: none !important;
+  }
+}
 #services h2 {
   text-transform: uppercase;
 }

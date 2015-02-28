@@ -53,11 +53,7 @@
     -moz-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
-}
-
-.lightbackground {
-    background: url('../images/collapse-dark.png') no-repeat;
-    z-index: 999999;
+    z-index: 99999;
 }
 
 #menu-launch {
