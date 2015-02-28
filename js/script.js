@@ -184,11 +184,12 @@ $(function() {
     var wheight = $(window).height(), //get height of the window
         wwidth = $(window).width(); //get window width
     
+        $('.scrolldown').css('top', 0.5*wheight+70);
+        $('.scrolldown').css('left', 0.5*wwidth-32);
+    
     if (wwidth>=1200) {
         $('.fullheight').css('height', wheight);
         $('.welcome-msg').css('top', wheight/2-240);
-        $('.scrolldown').css('top', 0.5*wheight+70);
-        $('.scrolldown').css('left', 0.5*wwidth-32);
     }
     if (wheight < 900) {
         $('#workflow').css('height', 350);
@@ -212,9 +213,9 @@ $(function() {
         if (wwidth>=1200) {
             $('.fullheight').css('height', wheight);
             $('.welcome-msg').css('top', wheight/2-240);
-            $('.scrolldown').css('top', 0.5*wheight+70);
-            $('.scrolldown').css('left', 0.5*wwidth-32);
         }
+        $('.scrolldown').css('top', 0.5*wheight+70);
+        $('.scrolldown').css('left', 0.5*wwidth-32);
         
         bucle();
     });
