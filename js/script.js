@@ -193,8 +193,10 @@ $(function() {
     if (wheight < 900) {
         $('#workflow').css('height', 350);
     } else {
-        $('#workflow').css('height', wheight-560);
+        $('#workflow').css('height', wheight-614);
     }
+    var portfolioHead = $('#portfolio .section-header').height();
+    $('#portfolio .column').css('height', wheight-portfolioHead-60);
     function bucle() {
         $('.scrolldown')
             .animate({'top': 0.5*wheight+70},800)
@@ -212,6 +214,7 @@ $(function() {
             $('.scrolldown').css('top', 0.5*wheight+70);
             $('.scrolldown').css('left', 0.5*wwidth-32);
         }
+        
         bucle();
     });
 

@@ -2,5 +2,41 @@
 // ==================
 
 #portfolio {
-    @include clearfix;
+    @include container;
+    .section-header {
+        background: $dark;
+        color: $light;
+        h2 {
+            color: $light;
+        }
+    }
+    #portfolio-grid {
+        width: 100%;
+        .column {
+            display: block;
+            width: 50%;
+            //height: 500px; ->JQUERY
+            float: left;
+            .project {
+                display: block;
+                height: 100%;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .project-50 {
+                height: 50%;
+            }
+        }
+        .yellow {
+            background: $yellow;
+        }
+        .purple {
+            background: $purple;
+        }
+        .darkgray {
+            background: $darkgray;
+        }
+    }    
 }

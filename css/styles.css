@@ -72,6 +72,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #000000;
   font-weight: 700;
   text-align: center;
+  line-height: 1.5;
 }
 
 strong {
@@ -107,13 +108,19 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding: 20px 0;
   min-height: 900px !important;
 }
 .bloque:after {
   content: " ";
   display: block;
   clear: both;
+}
+
+.section-header {
+  display: block;
+  width: 100%;
+  float: left;
+  padding: 30px 0;
 }
 
 header .brand img {
@@ -386,11 +393,55 @@ header .fullheight .scrolldown {
   font-size: 1.5em;
   text-align: left;
 }
+#services #workflow-footer {
+  display: block;
+  width: 100%;
+  height: 25px;
+  background: #e5e5e5;
+}
 
-#portfolio:before, #portfolio:after {
-  content: '';
-  display: table;
+#portfolio {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 #portfolio:after {
+  content: " ";
+  display: block;
   clear: both;
+}
+#portfolio .section-header {
+  background: #000000;
+  color: #ffffff;
+}
+#portfolio .section-header h2 {
+  color: #ffffff;
+}
+#portfolio #portfolio-grid {
+  width: 100%;
+}
+#portfolio #portfolio-grid .column {
+  display: block;
+  width: 50%;
+  float: left;
+}
+#portfolio #portfolio-grid .column .project {
+  display: block;
+  height: 100%;
+}
+#portfolio #portfolio-grid .column .project img {
+  width: 100%;
+  height: auto;
+}
+#portfolio #portfolio-grid .column .project-50 {
+  height: 50%;
+}
+#portfolio #portfolio-grid .yellow {
+  background: #fad53f;
+}
+#portfolio #portfolio-grid .purple {
+  background: #4a41e7;
+}
+#portfolio #portfolio-grid .darkgray {
+  background: #262626;
 }
