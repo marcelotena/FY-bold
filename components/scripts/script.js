@@ -25,10 +25,11 @@ $(function() {
     if (wheight < 900) {
         $('#workflow').css('height', 350);
     } else {
-        $('#workflow').css('height', wheight-614);
+        $('#workflow').css('height', wheight-609);
     }
     var portfolioHead = $('#portfolio .section-header').height();
     $('#portfolio .column').css('height', wheight-portfolioHead-60);
+    $('#portfolio .active-column').css('height', wheight-portfolioHead-60);
     function bucle() {
         $('.scrolldown')
             .animate({'top': 0.5*wheight+70},800)
@@ -57,19 +58,22 @@ $(function() {
     //FUNCION SCROLL
     $(window).scroll(function() {
         var windowpos = $(window).scrollTop();
-        if (windowpos >= $('#services').offset().top-31) {
+        if ((windowpos >= $('#services').offset().top-31)&&(windowpos < $('#portfolio').offset().top-31)) {
             $('#menu-launch').addClass('lightbackground');
             $('#brand-dark').css({
-                opacity: '0.5',
-                display: 'block'
+                opacity: '1',
+                left: '20px'
             });
         }else{
             $('#menu-launch').removeClass('lightbackground');
+        }
+        if (windowpos < $('#services').offset().top-31) {
             $('#brand-dark').css({
                 opacity: '0',
-                display: 'none'
+                left: '-100px'
             });
         }
+        
         
         //COMPROBAMOS SI SE HA ABIERTO EL MENÚ O SI ESTAMOS EN FONDO CLARO/OSCURO
         var abierto = $('#menu-launch').hasClass('abierto');

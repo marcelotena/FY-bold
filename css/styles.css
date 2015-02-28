@@ -223,8 +223,8 @@ header .fullheight .scrolldown {
 
 #services #brand-dark {
   position: fixed;
-  display: none;
-  left: 20px;
+  display: block;
+  left: -100px;
   top: 20px;
   width: 80px;
   height: 51px;
@@ -420,20 +420,25 @@ header .fullheight .scrolldown {
 #portfolio #portfolio-grid {
   width: 100%;
 }
-#portfolio #portfolio-grid .column {
+#portfolio #portfolio-grid .active-column {
   display: block;
-  width: 50%;
+  width: 65%;
   float: left;
 }
-#portfolio #portfolio-grid .column .project {
+#portfolio #portfolio-grid .column {
+  display: block;
+  width: 35%;
+  float: left;
+}
+#portfolio #portfolio-grid .project {
   display: block;
   height: 100%;
 }
-#portfolio #portfolio-grid .column .project img {
+#portfolio #portfolio-grid .project img {
   width: 100%;
   height: auto;
 }
-#portfolio #portfolio-grid .column .project-50 {
+#portfolio #portfolio-grid .project-50 {
   height: 50%;
 }
 #portfolio #portfolio-grid .yellow {

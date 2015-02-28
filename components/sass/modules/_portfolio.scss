@@ -12,22 +12,26 @@
     }
     #portfolio-grid {
         width: 100%;
+        .active-column {
+            display: block;
+            width: 65%;
+            float: left;
+        }
         .column {
             display: block;
-            width: 50%;
-            //height: 500px; ->JQUERY
+            width: 35%;
             float: left;
-            .project {
-                display: block;
-                height: 100%;
-                img {
-                    width: 100%;
-                    height: auto;
-                }
+        }
+        .project {
+            display: block;
+            height: 100%;
+            img {
+                width: 100%;
+                height: auto;
             }
-            .project-50 {
-                height: 50%;
-            }
+        }
+        .project-50 {
+            height: 50%;
         }
         .yellow {
             background: $yellow;
