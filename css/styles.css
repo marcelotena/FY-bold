@@ -185,6 +185,7 @@ header .fullheight .scrolldown {
 }
 #pageslide ul .nav-extras ul {
   padding: 15px 0;
+  width: 100%;
 }
 #pageslide ul .nav-extras ul li {
   padding: 3px 0;
@@ -409,6 +410,12 @@ header .fullheight .scrolldown {
   content: " ";
   display: block;
   clear: both;
+}
+#portfolio #portfolio-top {
+  display: block;
+  position: relative;
+  top: 250px;
+  visibility: hidden;
 }
 #portfolio .section-header {
   background: #000000;
