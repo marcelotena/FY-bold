@@ -22,6 +22,12 @@
             display: block;
             width: 65%;
             float: left;
+            img {
+                margin-right: 40%;
+                @include breakpoint(max-width $medium) {
+                    margin-right: 0;
+                }
+            }
         }
         .column {
             display: block;
@@ -32,8 +38,9 @@
             display: block;
             height: 100%;
             img {
-                width: 100%;
-                height: auto;
+                width: auto;
+                height: 100%;
+                padding: 20px 0;
             }
         }
         .project-50 {

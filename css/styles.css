@@ -227,10 +227,9 @@ header .fullheight .scrolldown {
   display: block;
   left: -100px;
   top: 20px;
-  width: 80px;
-  height: 51px;
+  width: 125px;
+  height: 80px;
   background: url("../images/logo-dark.png") no-repeat;
-  background-size: 80px 51px;
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
   -o-transition: all 0.15s ease-in-out;
@@ -432,6 +431,14 @@ header .fullheight .scrolldown {
   width: 65%;
   float: left;
 }
+#portfolio #portfolio-grid .active-column img {
+  margin-right: 40%;
+}
+@media (max-width: 960px) {
+  #portfolio #portfolio-grid .active-column img {
+    margin-right: 0;
+  }
+}
 #portfolio #portfolio-grid .column {
   display: block;
   width: 35%;
@@ -442,8 +449,9 @@ header .fullheight .scrolldown {
   height: 100%;
 }
 #portfolio #portfolio-grid .project img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
+  padding: 20px 0;
 }
 #portfolio #portfolio-grid .project-50 {
   height: 50%;
@@ -452,7 +460,7 @@ header .fullheight .scrolldown {
   background: #fad53f;
 }
 #portfolio #portfolio-grid .purple {
-  background: #4a41e7;
+  background: #4e1656;
 }
 #portfolio #portfolio-grid .darkgray {
   background: #262626;
