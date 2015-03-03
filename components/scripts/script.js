@@ -23,9 +23,7 @@ $(function() {
         $('.fullheight').css('height', wheight);
         $('.welcome-msg').css('top', wheight/2-240);
     }
-    if (wheight < 900) {
-        $('#workflow').css('height', 350);
-    } else {
+    if (wwidth > 1200) {
         $('#workflow').css('height', wheight-609);
     }
     var portfolioHead = $('#portfolio .section-header').height();
@@ -45,6 +43,7 @@ $(function() {
         if (wwidth>=1200) {
             $('.fullheight').css('height', wheight);
             $('.welcome-msg').css('top', wheight/2-240);
+            $('#workflow').css('height', wheight-609);
         }
         $('.scrolldown').css('top', 0.5*wheight+70);
         $('.scrolldown').css('left', 0.5*wwidth-32);
@@ -59,7 +58,12 @@ $(function() {
     //FUNCION SCROLL
     $(window).scroll(function() {
         var windowpos = $(window).scrollTop();
-        if ((windowpos >= $('#services').offset().top-31)&&(windowpos < $('#portfolio').offset().top-31)) {
+        var wwidth = $(window).width(); //get window width
+        var mediaOffset;
+        if (wwidth>1200){mediaOffset=-31;}
+        if (wwidth<=1200){mediaOffset=180;}
+        if (wwidth<=960){mediaOffset=410;}
+        if ((windowpos >= $('#services').offset().top-31)&&(windowpos < $('#portfolio').offset().top+mediaOffset)) {
             $('#menu-launch').addClass('lightbackground');
             $('#brand-dark').css({
                 opacity: '1',
@@ -74,7 +78,6 @@ $(function() {
                 left: '-100px'
             });
         }
-        
         
         //COMPROBAMOS SI SE HA ABIERTO EL MENÚ O SI ESTAMOS EN FONDO CLARO/OSCURO
         var abierto = $('#menu-launch').hasClass('abierto');

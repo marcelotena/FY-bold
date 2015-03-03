@@ -114,7 +114,22 @@
                     font-size: 1.5em;
                     text-align: left;
                 }
+                @include breakpoint(max-width $medium){
+                    @include span(12);
+                    display: block;
+                    float: left;
+                    padding: 10px 100px;
+                    #{headings()} {
+                        text-align: center;
+                    }
+                    text-align: center;
+                }
             }
+        }
+        @include breakpoint(max-width $wide){
+            min-height: 300px;
+            padding-bottom: 30px;
+            float: left;
         }
     }
     #workflow-footer {

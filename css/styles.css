@@ -75,6 +75,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
 }
 
+h3 {
+  font-size: 1.2em;
+}
+
 strong {
   font-weight: 700;
 }
@@ -393,6 +397,31 @@ header .fullheight .scrolldown {
   font-size: 1.5em;
   text-align: left;
 }
+@media (max-width: 960px) {
+  #services #workflow ul li {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    display: block;
+    float: left;
+    padding: 10px 100px;
+    text-align: center;
+  }
+  #services #workflow ul li h1, #services #workflow ul li h2, #services #workflow ul li h3, #services #workflow ul li h4, #services #workflow ul li h5, #services #workflow ul li h6 {
+    text-align: center;
+  }
+}
+@media (max-width: 1200px) {
+  #services #workflow {
+    min-height: 300px;
+    padding-bottom: 30px;
+    float: left;
+  }
+}
 #services #workflow-footer {
   display: block;
   width: 100%;
@@ -423,26 +452,19 @@ header .fullheight .scrolldown {
 #portfolio .section-header h2 {
   color: #ffffff;
 }
+#portfolio .triangulo-izq {
+  display: block;
+  margin: 0 auto;
+  border-width: 25px 25px 25px 0;
+  border-color: transparent #ffffff transparent transparent;
+  border-style: solid;
+  width: 0;
+  height: 0;
+  position: relative;
+  left: -185px;
+}
 #portfolio #portfolio-grid {
   width: 100%;
-}
-#portfolio #portfolio-grid .active-column {
-  display: block;
-  width: 65%;
-  float: left;
-}
-#portfolio #portfolio-grid .active-column img {
-  margin-right: 40%;
-}
-@media (max-width: 960px) {
-  #portfolio #portfolio-grid .active-column img {
-    margin-right: 0;
-  }
-}
-#portfolio #portfolio-grid .column {
-  display: block;
-  width: 35%;
-  float: left;
 }
 #portfolio #portfolio-grid .project {
   display: block;
@@ -453,8 +475,53 @@ header .fullheight .scrolldown {
   height: 100%;
   padding: 20px 0;
 }
+#portfolio #portfolio-grid .project .project-description {
+  display: none;
+}
 #portfolio #portfolio-grid .project-50 {
   height: 50%;
+}
+#portfolio #portfolio-grid .active-column {
+  display: block;
+  width: 65%;
+  float: left;
+}
+#portfolio #portfolio-grid .active-column img {
+  float: left;
+  margin-left: 5%;
+}
+@media (max-width: 960px) {
+  #portfolio #portfolio-grid .active-column img {
+    margin-right: 0;
+  }
+}
+#portfolio #portfolio-grid .active-column .project-description {
+  display: block;
+  float: right;
+  max-width: 350px;
+  background: #ffffff;
+  padding: 10px 20px;
+  margin-top: 15%;
+  margin-right: 10%;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+}
+#portfolio #portfolio-grid .active-column .project-description h3 {
+  position: relative;
+  top: -30px;
+}
+#portfolio #portfolio-grid .active-column .project-description p {
+  font-size: 0.8em;
+  padding: 10px 0;
+  line-height: 1.8em;
+  position: relative;
+  top: -25px;
+}
+#portfolio #portfolio-grid .column {
+  display: block;
+  width: 35%;
+  float: left;
 }
 #portfolio #portfolio-grid .yellow {
   background: #fad53f;
