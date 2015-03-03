@@ -453,7 +453,7 @@ header .fullheight .scrolldown {
   color: #ffffff;
 }
 #portfolio .triangulo-izq {
-  display: block;
+  display: none;
   margin: 0 auto;
   border-width: 25px 25px 25px 0;
   border-color: transparent #ffffff transparent transparent;
@@ -469,17 +469,33 @@ header .fullheight .scrolldown {
 #portfolio #portfolio-grid .project {
   display: block;
   height: 100%;
+  width: auto;
 }
 #portfolio #portfolio-grid .project img {
+  display: block;
+  margin: 0 auto;
   width: auto;
   height: 100%;
   padding: 20px 0;
 }
-#portfolio #portfolio-grid .project .project-description {
+#portfolio #portfolio-grid .project .project-description p {
   display: none;
 }
 #portfolio #portfolio-grid .project-50 {
   height: 50%;
+}
+#portfolio #portfolio-grid .project-50 .project-description {
+  display: none;
+}
+#portfolio #portfolio-grid .expand {
+  content: '';
+  display: block;
+  position: relative;
+  bottom: 80px;
+  left: 20px;
+  width: 64px;
+  height: 64px;
+  background: url("../images/add-md.png") no-repeat;
 }
 #portfolio #portfolio-grid .active-column {
   display: block;
@@ -488,7 +504,7 @@ header .fullheight .scrolldown {
 }
 #portfolio #portfolio-grid .active-column img {
   float: left;
-  margin-left: 5%;
+  margin-left: 15%;
 }
 @media (max-width: 960px) {
   #portfolio #portfolio-grid .active-column img {
@@ -502,21 +518,17 @@ header .fullheight .scrolldown {
   background: #ffffff;
   padding: 10px 20px;
   margin-top: 15%;
-  margin-right: 10%;
+  margin-right: 15%;
+  position: relative;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
   border-radius: 15px;
 }
-#portfolio #portfolio-grid .active-column .project-description h3 {
-  position: relative;
-  top: -30px;
-}
 #portfolio #portfolio-grid .active-column .project-description p {
+  display: block;
   font-size: 0.8em;
   padding: 10px 0;
   line-height: 1.8em;
-  position: relative;
-  top: -25px;
 }
 #portfolio #portfolio-grid .column {
   display: block;

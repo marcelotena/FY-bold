@@ -17,7 +17,7 @@
         }
     }
     .triangulo-izq {
-            display: block;
+            display: none;
             margin: 0 auto;
             border-width: 25px 25px 25px 0;
             border-color: transparent $light transparent transparent;
@@ -32,17 +32,35 @@
         .project {
             display: block;
             height: 100%;
+            width: auto;
             img {
+                display: block;
+                margin: 0 auto;
                 width: auto;
                 height: 100%;
                 padding: 20px 0;
             }
             .project-description {
-                display: none;
+                p {
+                    display: none;                    
+                }
             }
         }
         .project-50 {
             height: 50%;
+            .project-description {
+                display: none;
+            }
+        }
+        .expand {
+            content: '';
+            display: block;
+            position: relative;
+            bottom: 80px;
+            left: 20px;
+            width: 64px;
+            height: 64px;
+            background: url('../images/add-md.png') no-repeat;
         }
         .active-column {
             display: block;
@@ -50,7 +68,7 @@
             float: left;
             img {
                 float: left;
-                margin-left: 5%;
+                margin-left: 15%;
                 @include breakpoint(max-width $medium) {
                     margin-right: 0;
                 }
@@ -62,18 +80,20 @@
                 background: $light;
                 padding: 10px 20px;
                 margin-top: 15%;
-                margin-right: 10%;
+                margin-right: 15%;
+                position: relative;
                 @include border-radius(15px);
                 h3 {
-                    position: relative;
-                    top: -30px;
+                    //position: relative;
+                    //top: -30px;
                 }
                 p {
+                    display: block;
                     font-size: 0.8em;
                     padding: 10px 0;
                     line-height: 1.8em;
-                    position: relative;
-                    top: -25px;
+                    //position: relative;
+                    //top: -25px;
                 }
             }
         }
