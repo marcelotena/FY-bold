@@ -124,7 +124,7 @@ body {
 }
 
 header .brand img {
-  width: 80px;
+  width: 125px;
   height: auto;
 }
 header .fullheight {
@@ -225,7 +225,7 @@ header .fullheight .scrolldown {
 #services #brand-dark {
   position: fixed;
   display: block;
-  left: -100px;
+  left: -200px;
   top: 20px;
   width: 125px;
   height: 80px;
