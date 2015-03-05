@@ -466,23 +466,40 @@ header .fullheight .scrolldown {
 #portfolio #portfolio-grid {
   width: 100%;
 }
+#portfolio #portfolio-grid .column {
+  display: block;
+  width: 35%;
+  float: left;
+}
 #portfolio #portfolio-grid .project {
   display: block;
   height: 100%;
   width: auto;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-#portfolio #portfolio-grid .project img {
+#portfolio #portfolio-grid .project .project-image {
+  display: block;
+  height: 100%;
+}
+#portfolio #portfolio-grid .project .project-image img {
   display: block;
   margin: 0 auto;
   width: auto;
   height: 100%;
   padding: 20px 0;
 }
-#portfolio #portfolio-grid .project .project-description p {
+#portfolio #portfolio-grid .project .project-description-container .project-description p {
   display: none;
 }
 #portfolio #portfolio-grid .project-50 {
   height: 50%;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 #portfolio #portfolio-grid .project-50 .project-description {
   display: none;
@@ -498,42 +515,85 @@ header .fullheight .scrolldown {
   background: url("../images/add-md.png") no-repeat;
 }
 #portfolio #portfolio-grid .active-column {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  padding-left: 0;
+  padding-right: 0;
   display: block;
   width: 65%;
   float: left;
 }
-#portfolio #portfolio-grid .active-column img {
+#portfolio #portfolio-grid .active-column .project-img {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
   float: left;
-  margin-left: 15%;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  display: block;
+  height: 100%;
+}
+#portfolio #portfolio-grid .active-column .project-img img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  height: 100%;
+  padding: 20px 0;
 }
 @media (max-width: 960px) {
-  #portfolio #portfolio-grid .active-column img {
-    margin-right: 0;
+  #portfolio #portfolio-grid .active-column .project-img {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
   }
 }
-#portfolio #portfolio-grid .active-column .project-description {
+#portfolio #portfolio-grid .active-column .project-description-container {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
   display: block;
   float: right;
-  max-width: 350px;
+}
+@media (max-width: 960px) {
+  #portfolio #portfolio-grid .active-column .project-description-container {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+}
+#portfolio #portfolio-grid .active-column .project-description-container .project-description {
   background: #ffffff;
+  width: 80%;
   padding: 10px 20px;
-  margin-top: 15%;
-  margin-right: 15%;
-  position: relative;
+  margin: 0 auto;
+  margin-top: 40px;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
   border-radius: 15px;
 }
-#portfolio #portfolio-grid .active-column .project-description p {
+#portfolio #portfolio-grid .active-column .project-description-container .project-description p {
   display: block;
   font-size: 0.8em;
   padding: 10px 0;
   line-height: 1.8em;
-}
-#portfolio #portfolio-grid .column {
-  display: block;
-  width: 35%;
-  float: left;
 }
 #portfolio #portfolio-grid .yellow {
   background: #fad53f;

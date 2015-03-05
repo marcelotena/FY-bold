@@ -47,9 +47,12 @@ $(function() {
         }
         $('.scrolldown').css('top', 0.5*wheight+70);
         $('.scrolldown').css('left', 0.5*wwidth-32);
+        var portfolioHead = $('#portfolio .section-header').height();
+        $('#portfolio .column').css('height', wheight-portfolioHead-60);
+        $('#portfolio .active-column').css('height', wheight-portfolioHead-60);
         
         bucle();
-    });
+    });//window resize function
 
     //PANEL LATERAL
     $(".lateral").pageslide({ direction: "left", modal: true });
@@ -103,9 +106,23 @@ $(function() {
                     });   
                 }
         
-    });
+        
+    });//window scroll function
     
-
+    //FUNCIONALIDAD PORTFOLIO
+    $('.column .project').click(function(){
+        $('.project').addClass('project-50');
+        $(this).removeClass('project-50');
+        $(this).parent('div').addClass('active-column');
+        $('.active-column').addClass('not-active-column');
+        $('.active-column').removeClass('active-column');
+    });
+    $('.column').click(function() {
+        $(this).addClass('active-column');
+        $('.active-column .project-50').appendTo($('.not-active-column'));
+        $('.active-column .project-50').css('height', '0%');
+        $('.active-column .project-50').remove();
+    });
 
 });//document ready
 

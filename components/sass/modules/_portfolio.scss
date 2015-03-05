@@ -29,25 +29,46 @@
     }
     #portfolio-grid {
         width: 100%;
+        //overflow: hidden;
+        .column {
+            display: block;
+            width: 35%;
+            float: left;
+        }
         .project {
             display: block;
             height: 100%;
             width: auto;
-            img {
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            .project-image {
                 display: block;
-                margin: 0 auto;
-                width: auto;
                 height: 100%;
-                padding: 20px 0;
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    width: auto;
+                    height: 100%;
+                    padding: 20px 0;
+                } 
             }
-            .project-description {
-                p {
-                    display: none;                    
+
+            .project-description-container {
+                .project-description {
+                    p {
+                        display: none;                    
+                    }
                 }
             }
         }
         .project-50 {
             height: 50%;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
             .project-description {
                 display: none;
             }
@@ -63,45 +84,58 @@
             background: url('../images/add-md.png') no-repeat;
         }
         .active-column {
+            @include span(12);
+            padding-left: 0;
+            padding-right: 0;
             display: block;
             width: 65%;
             float: left;
-            img {
-                float: left;
-                margin-left: 15%;
+            .project-img {
+                @include span(6 of 12);
+                display: block;
+                height: 100%;
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    width: auto;
+                    height: 100%;
+                    padding: 20px 0;
+                } 
                 @include breakpoint(max-width $medium) {
-                    margin-right: 0;
+                    @include span(12 of 12);
                 }
             }
-            .project-description {
+            .project-description-container {
+                @include span(6 of 12);
                 display: block;
                 float: right;
-                max-width: 350px;
-                background: $light;
-                padding: 10px 20px;
-                margin-top: 15%;
-                margin-right: 15%;
-                position: relative;
-                @include border-radius(15px);
-                h3 {
-                    //position: relative;
-                    //top: -30px;
+                @include breakpoint(max-width $medium) {
+                    @include span(12 of 12);
                 }
-                p {
-                    display: block;
-                    font-size: 0.8em;
-                    padding: 10px 0;
-                    line-height: 1.8em;
-                    //position: relative;
-                    //top: -25px;
+                .project-description {
+                    background: $light;
+                    width: 80%;
+                    padding: 10px 20px;
+                    margin: 0 auto;
+                    margin-top: 40px;
+                    @include border-radius(15px);
+                    h3 {
+                        //position: relative;
+                        //top: -30px;
+                    }
+                    p {
+                        display: block;
+                        font-size: 0.8em;
+                        padding: 10px 0;
+                        line-height: 1.8em;
+                        //position: relative;
+                        //top: -25px;
+                    }
                 }
             }
+            
         }
-        .column {
-            display: block;
-            width: 35%;
-            float: left;
-        }
+        
         .yellow {
             background: $yellow;
         }
