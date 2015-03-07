@@ -10,7 +10,6 @@ var jsSources = [
     //'components/scripts/*******.js'
     'components/scripts/jqloader.js',
     'components/scripts/menulateral-jquery.js',
-    'components/scripts/jquery.shuffle.modernizr.js',
     'components/scripts/script.js'
 ];
 var sassSources = ['components/sass/styles.scss'];

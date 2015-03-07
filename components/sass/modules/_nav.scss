@@ -85,7 +85,7 @@
           width: 0;
           height: 100%;
           z-index: 0;
-          @include transition;
+          @include transition-menu;
         }
         &:hover:before {
             display: none;

@@ -33,17 +33,6 @@
         float: l;
     }
     
-    .contact-form .name, .contact-form .subject, .contact-form .email {
-        width: 33.03%;
-        position: relative;
-        float: left;
-        margin-right: 5px;
-        
-        :focus {
-            border: 1px solid $dark;
-        }
-    }
-    
     .contact-form .subject{
         margin-right: 0;
     } 
@@ -94,22 +83,33 @@
         padding: 15px;
         outline: none;
         background: #fff;
-        border: 1px solid #e5e5e5;
+        border: 3px solid $dark;
         color: #1a1b1b;
         font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-size: 13px;
         margin: 10px 0;
     }
     
+    .contact-form .name, .contact-form .subject, .contact-form .email {
+        width: 33%;
+        position: relative;
+        float: left;
+        margin-right: 5px;
+        
+        :focus {
+            border: 3px solid $blue;
+        }
+    }
+    
     textarea{
         position: relative;
         float: left;
-        width: 100%;
+        width: 99.7%;
         padding: 15px 15px;
         outline: none;
         height: 110px;
         background: transparent; 
-        border: 1px solid #e5e5e5;
+        border: 3px solid $dark;
         color: #1a1b1b;
         font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-size: 13px;
@@ -117,7 +117,7 @@
     
     textarea:focus {
         outline: none;
-        border: 1px solid $dark;
+        border: 3px solid $blue;
         background: #fff;
     }
     

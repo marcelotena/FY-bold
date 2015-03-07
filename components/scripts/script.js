@@ -18,11 +18,13 @@ $(function() {
     
         $('.scrolldown').css('top', 0.5*wheight+70);
         $('.scrolldown').css('left', 0.5*wwidth-32);
-    
-    if (wwidth>=768) {
         $('.fullheight').css('height', wheight);
+    if (wwidth>650){
         $('.welcome-msg').css('top', wheight/2-240);
+    }else{
+        $('.welcome-msg').css('top', wheight/2-400);
     }
+    
     if (wwidth > 1200) {
         $('#workflow').css('height', wheight-609);
     }
@@ -40,11 +42,15 @@ $(function() {
     $(window).resize(function() {
         var wheight = $(window).height(), //get height of the window
         wwidth = $(window).width(); //get window width
-        if (wwidth>=1200) {
-            $('.fullheight').css('height', wheight);
+
+        $('.fullheight').css('height', wheight);
+        if (wwidth>650){
             $('.welcome-msg').css('top', wheight/2-240);
-            $('#workflow').css('height', wheight-609);
+        }else{
+            $('.welcome-msg').css('top', wheight/2-400);
         }
+        $('#workflow').css('height', wheight-609);
+        
         $('.scrolldown').css('top', 0.5*wheight+70);
         $('.scrolldown').css('left', 0.5*wwidth-32);
         var portfolioHead = $('#portfolio .section-header').height();
@@ -110,19 +116,31 @@ $(function() {
     });//window scroll function
     
     //FUNCIONALIDAD PORTFOLIO
-    /*$('.column .project').click(function(){
+    $('.not-active-column .project:nth-child(1)').addClass('top');
+    $('.not-active-column .project:nth-child(2)').addClass('bottom');
+    
+    $('.column .project').click(function(){
         $('.project').addClass('project-50');
         $(this).removeClass('project-50');
-        $(this).parent('div').addClass('active-column');
         $('.active-column').addClass('not-active-column');
         $('.active-column').removeClass('active-column');
+        $(this).parent('div').addClass('active-column');
+        $(this).parent('div').removeClass('not-active-column');
+        $('.not-active-column .project:nth-child(1)').addClass('top');
+        $('.not-active-column .project:nth-child(2)').addClass('bottom');
     });
     $('.column').click(function() {
         $(this).addClass('active-column');
         $('.active-column .project-50').appendTo($('.not-active-column'));
+        $('.active-column .project-50').removeClass('top');
+        $('.active-column .project-50').removeClass('bottom');
         $('.active-column .project-50').css('height', '0%');
         $('.active-column .project-50').remove();
-    });*/
+        $('.not-active-column .project').removeClass('top');
+        $('.not-active-column .project').removeClass('bottom');
+        $('.not-active-column .project:nth-child(1)').addClass('top');
+        $('.not-active-column .project:nth-child(2)').addClass('bottom');
+    });
     
     //CONTACT FORM
     if ($('#contact_form').length){
