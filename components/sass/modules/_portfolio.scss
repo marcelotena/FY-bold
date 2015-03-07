@@ -29,7 +29,12 @@
     }
     #portfolio-grid {
         width: 100%;
-        //overflow: hidden;
+        overflow: hidden;
+        #container {
+            display: block;
+            height: 100%;
+            width: auto;
+        }
         .column {
             display: block;
             width: 35%;

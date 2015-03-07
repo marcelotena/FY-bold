@@ -9,7 +9,8 @@ var jsSources = [
     //añade aquí archivos .js para concatenar en el script final
     //'components/scripts/*******.js'
     'components/scripts/jqloader.js',
-    'components/scripts/jquery.pageslide.js',
+    'components/scripts/menulateral-jquery.js',
+    'components/scripts/jquery.shuffle.modernizr.js',
     'components/scripts/script.js'
 ];
 var sassSources = ['components/sass/styles.scss'];

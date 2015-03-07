@@ -7,7 +7,6 @@
     <meta name="description" content="">
     <meta name="author" content="Marcelo Tena Vicente">
     <title>Fast and Yours - Digital Studio located in Barcelona</title>
-    <link href="css/jquery.pageslide.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="icon" type="image/ico" href="favicon.ico"/>
 </head>
@@ -21,11 +20,10 @@
         <a id="menu-launch" href="#main-nav" class="lateral"></a>
         <nav id="main-nav" class="navbar">
             <ul>
-                <li><a href="#intro">Home</a></li>
-                <li><a href="#services">What we do</a></li>
-                <li><a href="#portfolio-top">Portfolio</a></li>
-                <li><a href="#jobs">Work with us</a></li>
-                <li><a href="#contact">Get in touch</a></li>
+                <li class="main"><a href="#intro">Home</a></li>
+                <li class="main"><a href="#services">What we do</a></li>
+                <li class="main"><a href="#portfolio-top">Portfolio</a></li>
+                <li class="main"><a href="#contact">Get in touch</a></li>
                 <li class="nav-extras">
                     <ul>
                         <!--<li><a href="#">Newsletter</a></li>-->
@@ -99,6 +97,7 @@
     </div>
     <div id="portfolio-grid">
         <div class="column active-column">
+            <div id="prj-container" class="project">
             <div class="project purple">
                 <div class="project-description-container">
                     <div class="project-description">
@@ -112,8 +111,10 @@
                     <img src="images/herdingcats-bg.png" alt="herding cats website game developer fast and yours responsive web design project">
                 </div>
             </div>
+            </div><!--end container-->
         </div>
         <div class="column">
+            <div id="prj-container" class="project project-50">
             <div class="project project-50 yellow">
                 <div class="project-description-container">
                     <div class="project-description">
@@ -127,6 +128,8 @@
                     <img src="images/herdingcats-bg.png" alt="herding cats website game developer fast and yours responsive web design project">
                 </div>
             </div>
+            </div><!--end container-->
+            <div id="prj-container" class="project project-50">
             <div class="project project-50 darkgray">
                 <div class="project-description-container">
                     <div class="project-description">
@@ -140,10 +143,59 @@
                     <img src="images/herdingcats-bg.png" alt="herding cats website game developer fast and yours responsive web design project">
                 </div>
             </div>
+            </div><!--end container-->
         </div>
     </div>
 
 </section><!-- END PORTFOLIO -->
+<section id="contact" class="fullheight bloque">
+    <div class="section-header">
+        <h2>Get in touch</h2>
+        <p>Feel free to send us a message if you want to know more or send us your résumé and tell us a little bit about you if you'd like to be a part of our team.</p>
+    </div>
+    <!-- CONTACT FORM -->			
+    <div id="contact_form" class="animated fadeInDown">
+						
+        <!-- Sucess Message -->
+        <div class="form-success">
+            <p><i class="fa fa-check"></i>Gracias, tu mensaje ha sido enviado.</p>
+        </div>
+				        
+        <!-- Begin form -->
+        <div class="contact-form"> 
+            <form action="contact-form/send.php" method="post" class="form">   	
+				<div class="name">
+				    <input class="text" type="text" name="name" placeholder="NOMBRE"> 
+				</div>
+				<div class="email">  
+				    <input class="text" type="text" name="email" placeholder="EMAIL"> 
+				</div>
+				<div class="subject">    
+				    <input class="text" type="text" name="subject" placeholder="ASUNTO">
+				</div>
+				            	
+				<input class="service-input" type="text" name="service" style="display:none;" >
+				            	
+				<div class="message">    
+				    <textarea name="message" rows="8" cols="60" placeholder="MENSAJE"></textarea> 
+                </div>
+                                
+				<div id="aviso-legal" class="condiciones">
+                    <label><input type="checkbox" id="checkbox" name="condiciones">He leído y acepto el <a class="fancybox" data-fancybox-type="iframe" href="avisolegal.html">aviso legal</a>.</label>
+                </div>
+				                
+				<div class="bt-contact">
+				    <a class="des-button-dark des-button-dark-1 des-button-dark-1d" id="submit"><span>ENVIAR EMAIL</span></a>
+				</div>
+				                    
+				<div class="loading"></div>
+				                
+            </form> 
+        </div>
+        <!-- End form -->
+    </div>
+    <!-- END CONTACT FORM -->
+</section><!-- END CONTACT -->
 </div><!-- END MENU WRAP -->
   <script src="js/script.js"></script>
 </body>

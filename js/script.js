@@ -291,6 +291,203 @@ $(function() {
         $('.active-column .project-50').css('height', '0%');
         $('.active-column .project-50').remove();
     });
+    
+    //CONTACT FORM
+    if ($('#contact_form').length){
+		$('#contact_form .service-input').val($('#contact_form .service select').val());
+		$('#contact_form .service select').change(function(){ $('#contact_form .service-input').val($('#contact_form .service').val()); });
+	}
+	
+	if (window.BrowserDetect.browser === "Explorer" && window.BrowserDetect.version < 10){
+		$('[placeholder]').focus(function() {
+			var input = $(this);
+			if (input.val() == input.attr('placeholder')) {
+				input.val('');
+				input.removeClass('placeholder');
+			}
+		}).blur(function() {
+			var input = $(this);
+			if (input.val() == '' || input.val() == input.attr('placeholder')) {
+				input.addClass('placeholder');
+				input.val(input.attr('placeholder'));
+			}
+		}).blur();
+	}
+	
+	if (window.BrowserDetect.browser === "Explorer"){
+		$('.contact-form select').focus(function(){ $(this).css('color','black'); }).blur(function(){ $(this).css('color','black'); }).blur();	
+	}
+	
+	//if submit button is clicked
+	$('.contact-form #submit').click(function () {		
+	if(document.getElementById('checkbox').checked == true){
+		$(this).find('[placeholder]').each(function() {
+			var input = $(this);
+			if (input.val() == input.attr('placeholder')) {
+				input.val('');
+			}
+		});
+		
+		var name = $('input[name=name]');
+		var email = $('input[name=email]');
+		var subject = $('input[name=subject]');
+		var comment = $('textarea[name=message]');
+
+		if (name.val()=='') {
+			name.addClass('hightlight');
+			return false;
+		} else name.removeClass('hightlight');
+		
+		if (email.val()=='') {
+			email.addClass('hightlight');
+			return false;
+		} else email.removeClass('hightlight');
+
+		//E-mail address validation
+		var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+		if(reg.test(email.val()) == false) {		 
+			email.addClass('hightlight');
+			return false;
+		} else email.removeClass('hightlight');	  
+		
+		if (comment.val()=='') {
+			comment.addClass('hightlight');
+			return false;
+		} else comment.removeClass('hightlight');
+		
+		//organize the data properly
+		var data = 'name=' + name.val() + '&email=' + email.val() + '&subject=' + 
+		subject.val() + '&comment='  + encodeURIComponent(comment.val());
+		
+		//disabled all the text fields
+		$('.contact input, .contact textarea').attr('disabled','true');
+		
+		//show the loading sign
+		$('.loading').show();
+		
+		//start the ajax
+		$.ajax({
+			//this is the php file that processes the data and send mail
+			url: "contact-form/send.php",	
+			type: "GET",
+			data: data,				
+			cache: false,
+			
+			//success
+			success: function (html) {				
+				//if process.php returned 1/true (send mail success)
+				if (html==1) {					
+					//clear the form
+					$('.contact-form input, .contact-form textarea').val('');
+					$('.contact-form select').val($('.contact-form select option').eq(0).val());
+					if (window.BrowserDetect.browser === "Explorer" && window.BrowserDetect.version < 10){
+						$('[placeholder]').focus(function() {
+							var input = $(this);
+							if (input.val() == input.attr('placeholder')) {
+								input.val('');
+								input.removeClass('placeholder');
+							}
+						}).blur(function() {
+							var input = $(this);
+							if (input.val() == '' || input.val() == input.attr('placeholder')) {
+								input.addClass('placeholder');
+								input.val(input.attr('placeholder'));
+							}
+						}).blur();
+					}
+					//show the success message
+					$('.form-success').slideDown('slow');
+					setTimeout(function(){
+						$('.form-success').slideUp('slow');
+					}, 5000);
+					
+				//if process.php returned 0/false (send mail failed)
+				} else alert('Ha ocurrido un error inesperado. Por favor pruebe más tarde.');				
+			}		
+		});
+		return false;} else alert ('Debes leer y estar de acuerdo con el Aviso Legal antes de enviar los datos del formulario.');//fin gran-if para comprobar si se ha marcado el checkbox, sino no envía nada
+	});
+    //END CONTACT FORM SCRIPT
+    
+    /* BEGIN: ANIMATED CONTENTS */
+	/* define if you want to display the contents animation (true|false) */
+	var effectsOnMobiles = false;
+	
+	var doAnimations = false;
+	if (isMobile.any() && effectsOnMobiles) doAnimations = true;
+	if (isMobile.any() && !effectsOnMobiles) doAnimations = false;
+	if (!isMobile.any()) doAnimations = true;
+	
+	if (isMobile.any()){
+		$('.parallax').css('background-attachment','scroll');
+		$('#intro-block .intro-text .intro-big').css('opacity', '1');
+	} 
+	
+	if (doAnimations){
+		$('.animated').each(function(e){
+			var el = $(this);
+			var classes = $(el).attr('class').split(" ");
+			var delay = false;
+			for (var i=0; i<classes.length; i++){
+				if (classes[i].indexOf("delay-") > -1){
+					delay = classes[i].slice(6,classes[i].length)/1000;
+				}
+			}
+			if (window.BrowserDetect.browser === "Explorer" && window.BrowserDetect.version < 10){
+				$(el).removeClass(effect).addClass('notinview').css({
+					opacity: 0
+				});
+				$(el).waypoint({
+					handler: function() {
+						if ($(this).hasClass('notinview')){
+							$(this).removeClass('notinview');	
+							var elem = $(this);
+							setTimeout(function(){
+								$(elem).animate({
+									opacity: 1
+								}, 1000);
+							}, delay*1000);
+						}
+					},
+					offset: '95%',
+					triggerOnce: true
+				}, function(){ $.waypoints("refresh"); });
+			} else {
+				var effect = getEffect($(el));
+				$(el).removeClass(effect).addClass('notinview').css({
+					'-webkit-animation-delay': delay+'s',
+					'-moz-animation-delay': delay+'s',
+					'animation-delay': delay+'s',
+					opacity: 0
+				});
+				$(el).waypoint({
+					handler: function() {
+						if ($(this).hasClass('notinview')){
+							$(this).addClass(effect).removeClass('notinview');	
+							$(this).css('opacity', 1);	
+						}
+					},
+					offset: '75%',
+					triggerOnce: true
+				}, function(){ $.waypoints("refresh"); });	
+			}
+		});
+	}
+	  
+
+
+    function getEffect(el){
+        var effects = ["bounce", "flash", "pulse", "rubberBand", "shake", "swing", "tada", "wobble", "bounceIn", "bounceInDown", "bounceInLeft", "bounceInRight", "bounceInUp", "bounceOut", "bounceOutDown", "bounceOutLeft", "bounceOutRight", "bounceOutUp", "fadeIn", "fadeInDown", "fadeInDownBig", "fadeInLeft", "fadeInLeftBig", "fadeInRight", "fadeInRightBig", "fadeInUp", "fadeInUpBig", "fadeOut", "fadeOutDown", "fadeOutDownBig", "fadeOutLeft", "fadeOutLeftBig", "fadeOutRight", "fadeOutRightBig", "fadeOutUp", "fadeOutUpBig", "flip", "flipInX", "flipInY", "flipOutX", "flipOutY", "lightSpeedIn", "lightSpeedOut", "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight", "rotateOut", "rotateOutDownLeft", "rotateOutDownRight", "rotateOutUpLeft", "rotateOutUpRight", "slideInDown", "slideInLeft", "slideInRight", "slideOutLeft", "slideOutRight", "slideOutUp", "hinge", "rollIn", "rollOut"]
+        var effect = false;
+        for (var i=0; i<effects.length; i++){
+            if (el.hasClass(effects[i])) {
+                effect = effects[i];
+            } 
+        }
+        effect = effect.toString();
+        return effect;
+    }
+
 
 });//document ready
 
