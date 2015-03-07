@@ -4,6 +4,9 @@
 #contact {
     @include span(10 of 12);
     float: none;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 750px;
     @include breakpoint(max-width $wide) {
         margin-top: 260px;
     }
@@ -22,7 +25,8 @@
     }
     
     .contact-form {
-        position: relative;
+        position: relative; 
+        top: 50px;
     }
     
     #respond .contact-form .name, #respond .contact-form .subject, #respond .contact-form .email{

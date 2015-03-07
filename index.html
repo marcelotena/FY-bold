@@ -13,6 +13,20 @@
 <!--END HEAD SECTION -->
     
 <body>
+    <script>
+        //GENERADOR DE EMAIL CON LINK "MAILTO"	
+        usuario="info";
+        dominio="fastandyours.com";
+        conector="@";
+
+        function dame_correo(){ 
+           return usuario + conector + dominio;
+        } 
+
+        function escribe_enlace_correo(){ 
+           document.write("<a href='mailto:" + dame_correo() + "'>" + dame_correo() + "</a>"); 
+        }
+    </script>
 <div id="menu-wrap">
 <header id="intro">
     <article class="fullheight">
@@ -142,7 +156,7 @@
     </div>
 
 </section><!-- END PORTFOLIO -->
-<section id="contact" class="fullheight bloque">
+<section id="contact">
     <div class="section-header">
         <h2>Habla con nosotros</h2>
         <p>Te invitamos a enviarnos un mensaje si quieres saber más o, si lo prefieres, puedes llamarnos al (+34) 722 760 260</p>
@@ -189,8 +203,16 @@
         <!-- End form -->
     </div>
     <!-- END CONTACT FORM -->
+    
 </section><!-- END CONTACT -->
+<section id="footer">
+    <div id="footer-container">
+        <div class="col-footer">(+34) 722 760 260</div>
+        <div class="col-footer"><script>escribe_enlace_correo();</script></div>
+        <div class="col-footer">Carrer de Verdi, 72, Bajos 2<sup>ª</sup><br>08012 Barcelona</div>
+    </div>
+</section>
 </div><!-- END MENU WRAP -->
-  <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

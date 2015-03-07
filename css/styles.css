@@ -732,6 +732,9 @@ header .fullheight .scrolldown {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
   float: none;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 750px;
   /* AVISO LEGAL */
   /* BT DARK */
 }
@@ -760,6 +763,7 @@ header .fullheight .scrolldown {
 }
 #contact .contact-form {
   position: relative;
+  top: 50px;
 }
 #contact #respond .contact-form .name, #contact #respond .contact-form .subject, #contact #respond .contact-form .email {
   width: 300px;
@@ -951,4 +955,37 @@ header .fullheight .scrolldown {
 #contact .des-button-dark-1d:active:after {
   width: 101%;
   opacity: 1;
+}
+
+#footer {
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  min-height: 30px;
+}
+#footer #footer-container {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#footer #footer-container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+#footer .col-footer {
+  display: block;
+  padding: 10px 0;
+  margin: 0 auto;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.33333%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+#footer a {
+  text-decoration: none;
+  color: #ffffff;
 }
