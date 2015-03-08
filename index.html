@@ -24,7 +24,7 @@
         } 
 
         function escribe_enlace_correo(){ 
-           document.write("<a href='mailto:" + dame_correo() + "'>" + dame_correo() + "</a>"); 
+           document.write("<a id='email' href='mailto:" + dame_correo() + "'>" + dame_correo() + "</a>"); 
         }
     </script>
 <div id="menu-wrap">
@@ -37,7 +37,7 @@
                 <li class="main"><a href="#intro">Inicio</a></li>
                 <li class="main"><a href="#services">¿Qué hacemos?</a></li>
                 <li class="main"><a href="#portfolio-top">Nuestros clientes</a></li>
-                <li class="main"><a href="#contact">Habla con nosotros</a></li>
+                <li class="main"><a href="#contact">Contacto</a></li>
                 <li class="nav-extras">
                     <ul>
                         <!--<li><a href="#">Newsletter</a></li>-->
@@ -158,7 +158,7 @@
 </section><!-- END PORTFOLIO -->
 <section id="contact" class="fullheight">
     <div class="section-header">
-        <h2>Habla con nosotros</h2>
+        <h2>¿Hablamos?</h2>
         <p>Te invitamos a enviarnos un mensaje si quieres saber más o, si lo prefieres, puedes llamarnos al (+34)&nbsp;722&nbsp;760&nbsp;260</p>
     </div>
     
@@ -209,15 +209,16 @@
     <!-- END CONTACT FORM -->
     <section id="footer">
     <div id="footer-container">
-        <div class="col-footer">(+34) 722 760 260</div>
+        <div class="col-footer">(+34) 722 760 260<br><script>escribe_enlace_correo();</script></div>
         <div class="col-footer">
-            <script>escribe_enlace_correo();</script>
+            <a href="#">Aviso Legal</a> | <a href="#">Política de cookies</a>
+        </div>
+        <div class="col-footer">
             <ul>
                 <li><a href="www.facebook.com/fastandyours" target="_blank"><img src="images/facebook-white.png" alt="facebook"></a></li>
                 <li><a href="www.twitter.com/fastandyours" target="_blank"><img src="images/twitter-white.png" alt="twitter"></a></li>
             </ul>
         </div>
-        <div class="col-footer">Carrer de Verdi, 72, Baixos 2<sup>ª</sup><br>08012 Barcelona</div>
     </div>
     </section>
 </section><!-- END CONTACT -->

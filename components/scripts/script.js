@@ -235,7 +235,7 @@ $(function() {
     //CONTACT FORM POSITIONING
     var contactHeight = $('#contact').height();
     var footerHeight = $('#footer').height();
-    $('.contact-form form').css('top', (contactHeight-footerHeight)/2);
+    $('.contact-form form').css('top', (contactHeight-footerHeight)/2+40);
     console.log(contactHeight);
     $('#contact_form textarea').css('width', ($('#contact_form .name').width())*3+9);
     $(window).resize(function() {

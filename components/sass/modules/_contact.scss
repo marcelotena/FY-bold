@@ -26,6 +26,10 @@
         color: $blue;
     }
     
+    .section-header {
+        margin-bottom: 20px;
+    }
+    
     #map {
         display: block;
         margin: 0 auto;
@@ -152,7 +156,7 @@
     }
     
     .loading{ 
-        display:none;
+        display: none;
     }
     
     /* AVISO LEGAL */
@@ -161,14 +165,14 @@
     }
 
     #aviso-legal {
-        display:block;
-        width:100%;
+        display: block;
+        width: 100%;
     }
     #aviso-legal label{
-        display:block;
-        width:100%;
-        text-align:center;
-        color: black;
+        display: block;
+        width: 96.5%;
+        text-align: center;
+        color: $dark;
         margin-top: 15px;	
     }
 
@@ -178,7 +182,8 @@
     
     .bt-contact{
         display: inline-block;
-        width: 100%;
+        width: 96.5%;
+        float: left;
     }
     
     /* BT DARK */

@@ -757,6 +757,9 @@ header .fullheight .scrolldown {
 #contact a {
   color: #0c00ed;
 }
+#contact .section-header {
+  margin-bottom: 20px;
+}
 #contact #map {
   display: block;
   margin: 0 auto;
@@ -889,9 +892,9 @@ header .fullheight .scrolldown {
 }
 #contact #aviso-legal label {
   display: block;
-  width: 100%;
+  width: 96.5%;
   text-align: center;
-  color: black;
+  color: #000000;
   margin-top: 15px;
 }
 #contact #aviso-legal input {
@@ -899,7 +902,8 @@ header .fullheight .scrolldown {
 }
 #contact .bt-contact {
   display: inline-block;
-  width: 100%;
+  width: 96.5%;
+  float: left;
 }
 #contact .des-button-dark {
   border: none;
@@ -969,6 +973,7 @@ header .fullheight .scrolldown {
   color: #ffffff;
   text-align: center;
   margin: 0 auto;
+  font-size: 0.8em;
 }
 #footer #footer-container {
   max-width: 80%;
@@ -1014,8 +1019,6 @@ header .fullheight .scrolldown {
   }
 }
 #footer a {
-  display: block;
-  width: 100%;
   text-decoration: none;
   color: #ffffff;
 }
