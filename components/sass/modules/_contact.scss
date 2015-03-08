@@ -2,11 +2,13 @@
 // ==================
 
 #contact {
-    @include span(10 of 12);
-    float: none;
+    display: block;
+    float: left;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     min-height: 750px;
+    position: relative;
     @include breakpoint(max-width $wide) {
         margin-top: 260px;
     }
@@ -24,9 +26,18 @@
         color: $blue;
     }
     
-    .contact-form {
-        position: relative; 
-        top: 50px;
+    #map {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    #contact_form {
+        width: 80%;
+        margin: 0 auto;
+        form {
+            width: 82.8%;
+            position: absolute;
+        }
     }
     
     #respond .contact-form .name, #respond .contact-form .subject, #respond .contact-form .email{
@@ -34,7 +45,6 @@
         position: relative;
         margin-left: 20%;
         float: left;
-        float: l;
     }
     
     .contact-form .subject{
@@ -95,7 +105,7 @@
     }
     
     .contact-form .name, .contact-form .subject, .contact-form .email {
-        width: 33%;
+        width: 32%;
         position: relative;
         float: left;
         margin-right: 5px;
@@ -108,7 +118,6 @@
     textarea{
         position: relative;
         float: left;
-        width: 99.7%;
         padding: 15px 15px;
         outline: none;
         height: 110px;

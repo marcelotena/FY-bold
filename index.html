@@ -156,11 +156,15 @@
     </div>
 
 </section><!-- END PORTFOLIO -->
-<section id="contact">
+<section id="contact" class="fullheight">
     <div class="section-header">
         <h2>Habla con nosotros</h2>
-        <p>Te invitamos a enviarnos un mensaje si quieres saber más o, si lo prefieres, puedes llamarnos al (+34) 722 760 260</p>
+        <p>Te invitamos a enviarnos un mensaje si quieres saber más o, si lo prefieres, puedes llamarnos al (+34)&nbsp;722&nbsp;760&nbsp;260</p>
     </div>
+    
+    <!-- GOOGLE MAP -->
+	<div id="map" style="height:23%; width:50%;"></div>
+    
     <!-- CONTACT FORM -->			
     <div id="contact_form" class="animated fadeInDown">
 						
@@ -203,16 +207,56 @@
         <!-- End form -->
     </div>
     <!-- END CONTACT FORM -->
-    
-</section><!-- END CONTACT -->
-<section id="footer">
+    <section id="footer">
     <div id="footer-container">
         <div class="col-footer">(+34) 722 760 260</div>
-        <div class="col-footer"><script>escribe_enlace_correo();</script></div>
-        <div class="col-footer">Carrer de Verdi, 72, Bajos 2<sup>ª</sup><br>08012 Barcelona</div>
+        <div class="col-footer">
+            <script>escribe_enlace_correo();</script>
+            <ul>
+                <li><a href="www.facebook.com/fastandyours" target="_blank"><img src="images/facebook-white.png" alt="facebook"></a></li>
+                <li><a href="www.twitter.com/fastandyours" target="_blank"><img src="images/twitter-white.png" alt="twitter"></a></li>
+            </ul>
+        </div>
+        <div class="col-footer">Carrer de Verdi, 72, Baixos 2<sup>ª</sup><br>08012 Barcelona</div>
     </div>
-</section>
+    </section>
+</section><!-- END CONTACT -->
+
 </div><!-- END MENU WRAP -->
     <script src="js/script.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript">
+		function mapinitialize() {
+			var latlng = new google.maps.LatLng(41.405165,2.155553);
+			var myOptions = {
+				zoom: 17,
+				center: latlng,
+				scrollwheel: false,
+				scaleControl: false,
+				disableDefaultUI: false,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(document.getElementById("map"),myOptions);
+			
+			var image = "images/mappin.png";
+			var marker = new google.maps.Marker({
+				map: map, 
+				icon: image,
+				position: map.getCenter()
+			});
+			
+			var contentString = 'Local 7Dos<br> C/ Verdi 72';
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+						
+			google.maps.event.addListener(marker, 'click', function() {
+			  infowindow.open(map,marker);
+			});
+							
+				
+		}
+		mapinitialize();
+	</script>
 </body>
 </html>
