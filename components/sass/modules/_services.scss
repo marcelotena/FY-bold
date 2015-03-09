@@ -120,6 +120,7 @@
                     #{headings()} {
                         font-size: 1.5em;
                         text-align: left;
+                        text-transform: capitalize;
                     }
                     @include breakpoint(max-width $medium){
                         @include span(12);
