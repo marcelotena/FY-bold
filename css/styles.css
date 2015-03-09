@@ -110,6 +110,7 @@ body {
   background: #ffffff;
   width: 100%;
   height: 100%;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.4);
 }
 
 .bloque {
@@ -117,7 +118,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  min-height: 900px !important;
 }
 .bloque:after {
   content: " ";
@@ -322,6 +322,9 @@ header .fullheight .scrolldown {
   height: 50px;
 }
 
+#services {
+  position: relative;
+}
 #services #brand-dark {
   position: fixed;
   display: block;
@@ -435,15 +438,21 @@ header .fullheight .scrolldown {
     padding-right: 0.83333%;
   }
 }
-#services .dft-btn {
+#services #metodologia {
+  float: left;
+  position: absolute;
+  bottom: 0;
+}
+#services #metodologia .dft-btn {
   margin: 30px;
 }
-#services #workflow {
+#services #metodologia #workflow {
   display: block;
+  float: left;
   width: 100%;
   background: #e5e5e5;
 }
-#services #workflow .triangulo {
+#services #metodologia #workflow .triangulo {
   display: block;
   margin: 0 auto;
   border-width: 25px 25px 0;
@@ -452,7 +461,7 @@ header .fullheight .scrolldown {
   width: 0;
   height: 0;
 }
-#services #workflow ul {
+#services #metodologia #workflow ul {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -461,12 +470,13 @@ header .fullheight .scrolldown {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
   float: none;
+  height: auto;
   margin: 0 auto;
   margin-top: 40px;
   background: #e5e5e5;
 }
 @media (max-width: 1500px) {
-  #services #workflow ul {
+  #services #metodologia #workflow ul {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -476,7 +486,7 @@ header .fullheight .scrolldown {
     padding-right: 0.83333%;
   }
 }
-#services #workflow ul li {
+#services #metodologia #workflow ul li {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -489,12 +499,12 @@ header .fullheight .scrolldown {
   text-align: left;
   padding: 0 20px;
 }
-#services #workflow ul li h1, #services #workflow ul li h2, #services #workflow ul li h3, #services #workflow ul li h4, #services #workflow ul li h5, #services #workflow ul li h6 {
+#services #metodologia #workflow ul li h1, #services #metodologia #workflow ul li h2, #services #metodologia #workflow ul li h3, #services #metodologia #workflow ul li h4, #services #metodologia #workflow ul li h5, #services #metodologia #workflow ul li h6 {
   font-size: 1.5em;
   text-align: left;
 }
 @media (max-width: 960px) {
-  #services #workflow ul li {
+  #services #metodologia #workflow ul li {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -507,18 +517,18 @@ header .fullheight .scrolldown {
     padding: 10px 100px;
     text-align: center;
   }
-  #services #workflow ul li h1, #services #workflow ul li h2, #services #workflow ul li h3, #services #workflow ul li h4, #services #workflow ul li h5, #services #workflow ul li h6 {
+  #services #metodologia #workflow ul li h1, #services #metodologia #workflow ul li h2, #services #metodologia #workflow ul li h3, #services #metodologia #workflow ul li h4, #services #metodologia #workflow ul li h5, #services #metodologia #workflow ul li h6 {
     text-align: center;
   }
 }
 @media (max-width: 1200px) {
-  #services #workflow {
+  #services #metodologia #workflow {
     min-height: 300px;
     padding-bottom: 30px;
     float: left;
   }
 }
-#services #workflow-footer {
+#services #metodologia #workflow-footer {
   display: block;
   width: 100%;
   height: 25px;
@@ -530,21 +540,18 @@ header .fullheight .scrolldown {
   margin-left: auto;
   margin-right: auto;
   background: #000000;
+  position: relative;
 }
 #portfolio:after {
   content: " ";
   display: block;
   clear: both;
 }
-#portfolio #portfolio-top {
-  display: block;
-  position: relative;
-  top: 250px;
-  visibility: hidden;
-}
 #portfolio .section-header {
   background: #000000;
   color: #ffffff;
+  position: absolute;
+  top: 0;
 }
 #portfolio .section-header h2 {
   color: #ffffff;
@@ -561,6 +568,9 @@ header .fullheight .scrolldown {
   left: -185px;
 }
 #portfolio #portfolio-grid {
+  float: left;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   overflow: hidden;
 }

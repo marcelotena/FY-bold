@@ -4,15 +4,12 @@
 #portfolio {
     @include container;
     background: $dark;
-    #portfolio-top {
-        display: block; 
-        position: relative; 
-        top: 250px; 
-        visibility: hidden;
-    }
+    position: relative;
     .section-header {
         background: $dark;
         color: $light;
+        position: absolute;
+        top: 0;
         h2 {
             color: $light;
         }
@@ -29,6 +26,9 @@
             left: -185px;
     }
     #portfolio-grid {
+        float: left;
+        position: absolute;
+        bottom: 0;
         width: 100%;
         overflow: hidden;
         #container {

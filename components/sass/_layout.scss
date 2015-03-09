@@ -5,12 +5,12 @@ body {
     background: $backgroundColour;
     width: 100%;
     height: 100%;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.4);
 }
 
 .bloque {
     @include container;
     text-align: center;
-    min-height: 900px!important;
 }
 
 .section-header {

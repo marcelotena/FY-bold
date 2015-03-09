@@ -2,6 +2,7 @@
 // ==================
 
 #services {
+    position: relative;
     #brand-dark {
         position: fixed;
         display: block;
@@ -77,65 +78,73 @@
             }
         }//li 
     }//servicelist
+    #metodologia {
+        float: left;
+        position: absolute;
+        bottom: 0;
+        
+        .dft-btn {
+            margin: 30px;
+        }//workflow button
 
-    .dft-btn {
-        margin: 30px;
-    }//workflow button
-    
-    #workflow {
-        display: block;
-        width: 100%;
-        background: $gray;
-        .triangulo {
+        #workflow {
             display: block;
-            margin: 0 auto;
-            border-width: 25px 25px 0;
-            border-color: $light transparent;
-            border-style: solid;
-            width: 0;
-            height: 0;
-        }
-        ul {
-            @include span(10);
-            @include breakpoint(max-width 1500px){
-                @include span(12);
-            }
-            float: none;
-            margin: 0 auto;
-            margin-top: 40px;
+            float: left;
+            width: 100%;
             background: $gray;
-            li {
-                @include span(4);
+            .triangulo {
                 display: block;
-                float: left;
-                text-align: left;
-                padding: 0 20px;
-                #{headings()} {
-                    font-size: 1.5em;
-                    text-align: left;
-                }
-                @include breakpoint(max-width $medium){
+                margin: 0 auto;
+                border-width: 25px 25px 0;
+                border-color: $light transparent;
+                border-style: solid;
+                width: 0;
+                height: 0;
+            }
+            ul {
+                @include span(10);
+                @include breakpoint(max-width 1500px){
                     @include span(12);
+                }
+                float: none;
+                height: auto;
+                margin: 0 auto;
+                margin-top: 40px;
+                background: $gray;
+                li {
+                    @include span(4);
                     display: block;
                     float: left;
-                    padding: 10px 100px;
+                    text-align: left;
+                    padding: 0 20px;
                     #{headings()} {
+                        font-size: 1.5em;
+                        text-align: left;
+                    }
+                    @include breakpoint(max-width $medium){
+                        @include span(12);
+                        display: block;
+                        float: left;
+                        padding: 10px 100px;
+                        #{headings()} {
+                            text-align: center;
+                        }
                         text-align: center;
                     }
-                    text-align: center;
                 }
             }
+            @include breakpoint(max-width $wide){
+                min-height: 300px;
+                padding-bottom: 30px;
+                float: left;
+            }
         }
-        @include breakpoint(max-width $wide){
-            min-height: 300px;
-            padding-bottom: 30px;
-            float: left;
+        #workflow-footer {
+            display: block;
+            width: 100%;
+            height: 25px;
+            background: $gray;
         }
     }
-    #workflow-footer {
-        display: block;
-        width: 100%;
-        height: 25px;
-        background: $gray;
-    }
+    
 }

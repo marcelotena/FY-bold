@@ -236,10 +236,25 @@ $(function() {
     var contactHeight = $('#contact').height();
     var footerHeight = $('#footer').height();
     $('.contact-form form').css('top', (contactHeight-footerHeight)/2+40);
-    console.log(contactHeight);
     $('#contact_form textarea').css('width', ($('#contact_form .name').width())*3+9);
     $(window).resize(function() {
         $('#contact_form textarea').css('width', ($('#contact_form .name').width())*3+9);
+    });
+    
+    //SMOOTH SCROLLING
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if(location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        })
     });
 
 });//document ready
