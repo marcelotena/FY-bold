@@ -665,9 +665,9 @@ header .fullheight .scrolldown {
   margin: 0 auto;
   margin-top: 20px;
   text-transform: capitalize;
-}
-#portfolio #portfolio-grid .active-column .project-description-container .dft-btn:hover {
-  background: #262626;
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
 }
 #portfolio #portfolio-grid .not-active-column {
   -moz-box-sizing: border-box;

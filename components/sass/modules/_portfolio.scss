@@ -106,9 +106,9 @@
                     margin: 0 auto;
                     margin-top: 20px;
                     text-transform: capitalize;
-                }//boton
-                .dft-btn:hover {
-                    background: $darkgray;
+                    width: 50%;
+                    text-align: center;
+                    text-decoration: none;
                 }//boton
             }//description
         }//active column
