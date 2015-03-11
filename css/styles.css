@@ -607,9 +607,6 @@ header .fullheight .scrolldown {
   position: absolute;
   left: 10%;
 }
-#portfolio #portfolio-grid .project .project-description-container .project-description p {
-  display: block;
-}
 #portfolio #portfolio-grid .project-50 {
   height: 50%;
   width: 100%;

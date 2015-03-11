@@ -112,8 +112,8 @@ $(function() {
     //centrar elementos en la columna activa
     var containerHeight = $('.active-column .project-image').height();
     $('.active-column .project-image img').css({
-        top: containerHeight/4-40,
-        bottom: containerHeight/4-40
+        top: containerHeight/4-70,
+        bottom: containerHeight/4-70
     });
     $('.not-active-column .project-image img').css({
         top: 0,
@@ -146,8 +146,8 @@ $(function() {
         $('.not-active-column .project:nth-child(2)').addClass('bottom');
         
         $('.active-column .project-image img').css({
-            top: containerHeight/4-40,
-            bottom: containerHeight/4-40
+            top: containerHeight/4-70,
+            bottom: containerHeight/4-70
         });
         $('.not-active-column .project-image img').css({
             top: 0,
