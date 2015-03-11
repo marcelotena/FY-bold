@@ -5,6 +5,7 @@
     @include container;
     background: $dark;
     position: relative;
+    
     .section-header {
         background: $dark;
         color: $light;
@@ -14,17 +15,7 @@
             color: $light;
         }
     }
-    .triangulo-izq {
-            display: none;
-            margin: 0 auto;
-            border-width: 25px 25px 25px 0;
-            border-color: transparent $light transparent transparent;
-            border-style: solid;
-            width: 0;
-            height: 0;
-            position: relative;
-            left: -185px;
-    }
+    
     #portfolio-grid {
         float: left;
         position: absolute;
@@ -52,16 +43,14 @@
             .project-image {
                 display: block;
                 height: 100%;
+                width: 50%;
                 position: relative;
                 img {
                     display: block;
                     margin: 0 auto;
-                    width: auto;
-                    height: 70%;
                     padding: 20px 0;
                     position: absolute;
                     left: 10%;
-                    top: 15%;
                 } 
             }
 
@@ -77,7 +66,6 @@
             height: 50%;
             width: 100%;
             position: absolute;
-            @include transition;
             .project-description {
                 display: none;
             }
@@ -122,16 +110,13 @@
                     margin-top: 40px;
                     @include border-radius(15px);
                     h3 {
-                        //position: relative;
-                        //top: -30px;
+
                     }
                     p {
                         display: block;
                         font-size: 0.8em;
                         padding: 10px 0;
                         line-height: 1.8em;
-                        //position: relative;
-                        //top: -25px;
                     }
                 }
             }
@@ -140,11 +125,17 @@
         
         .not-active-column {
             .project-image {
+                display: block;
+                height: 100%;
+                width: auto;
                 img {
-                    left:0;
-                    right:0;
-                    margin-left:auto;
-                    margin-right:auto;
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    height: 100%;
                 }
             }
         }

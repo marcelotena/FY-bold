@@ -562,17 +562,6 @@ header .fullheight .scrolldown {
 #portfolio .section-header h2 {
   color: #ffffff;
 }
-#portfolio .triangulo-izq {
-  display: none;
-  margin: 0 auto;
-  border-width: 25px 25px 25px 0;
-  border-color: transparent #ffffff transparent transparent;
-  border-style: solid;
-  width: 0;
-  height: 0;
-  position: relative;
-  left: -185px;
-}
 #portfolio #portfolio-grid {
   float: left;
   position: absolute;
@@ -608,17 +597,15 @@ header .fullheight .scrolldown {
 #portfolio #portfolio-grid .project .project-image {
   display: block;
   height: 100%;
+  width: 50%;
   position: relative;
 }
 #portfolio #portfolio-grid .project .project-image img {
   display: block;
   margin: 0 auto;
-  width: auto;
-  height: 70%;
   padding: 20px 0;
   position: absolute;
   left: 10%;
-  top: 15%;
 }
 #portfolio #portfolio-grid .project .project-description-container .project-description p {
   display: block;
@@ -627,10 +614,6 @@ header .fullheight .scrolldown {
   height: 50%;
   width: 100%;
   position: absolute;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 #portfolio #portfolio-grid .project-50 .project-description {
   display: none;
@@ -704,11 +687,19 @@ header .fullheight .scrolldown {
   padding: 10px 0;
   line-height: 1.8em;
 }
+#portfolio #portfolio-grid .not-active-column .project-image {
+  display: block;
+  height: 100%;
+  width: auto;
+}
 #portfolio #portfolio-grid .not-active-column .project-image img {
+  display: block;
+  top: 0;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  height: 100%;
 }
 #portfolio #portfolio-grid .yellow {
   background: #fad53f;
