@@ -584,7 +584,7 @@ header .fullheight .scrolldown {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-#portfolio #portfolio-grid .project {
+#portfolio #portfolio-grid .column .project {
   display: block;
   position: absolute;
   height: 100%;
@@ -594,29 +594,16 @@ header .fullheight .scrolldown {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-#portfolio #portfolio-grid .project-50 {
+#portfolio #portfolio-grid .column .project-50 {
   height: 50%;
   width: 100%;
   position: absolute;
 }
-#portfolio #portfolio-grid .project-50 .project-description {
-  display: none;
-}
-#portfolio #portfolio-grid .top {
+#portfolio #portfolio-grid .column .top {
   top: 0;
 }
-#portfolio #portfolio-grid .bottom {
+#portfolio #portfolio-grid .column .bottom {
   bottom: 0;
-}
-#portfolio #portfolio-grid .expand {
-  content: '';
-  display: block;
-  position: relative;
-  bottom: 80px;
-  left: 20px;
-  width: 64px;
-  height: 64px;
-  background: url("../images/add-md.png") no-repeat;
 }
 #portfolio #portfolio-grid .active-column {
   -moz-box-sizing: border-box;
@@ -634,59 +621,53 @@ header .fullheight .scrolldown {
 }
 #portfolio #portfolio-grid .active-column .project-image {
   display: block;
-  height: 100%;
-  width: 50%;
   position: relative;
+  height: 100%;
+  width: 41%;
+  padding: 20px 0;
+}
+#portfolio #portfolio-grid .active-column .project-image img {
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  left: 15%;
+  width: 100%;
+  height: auto;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-#portfolio #portfolio-grid .active-column .project-image img {
-  display: block;
-  margin: 0 auto;
-  padding: 20px 0;
-  position: absolute;
-  left: 10%;
-}
 #portfolio #portfolio-grid .active-column .project-description-container {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 50%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
   display: block;
-  float: right;
+  position: absolute;
+  right: 8%;
+  top: 0;
+  width: 40%;
+  text-align: left;
+  color: #ffffff;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-@media (max-width: 960px) {
-  #portfolio #portfolio-grid .active-column .project-description-container {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 100%;
-    float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-  }
+#portfolio #portfolio-grid .active-column .project-description-container h3 {
+  text-align: left;
+  text-transform: capitalize;
+  font-size: 3em;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
-#portfolio #portfolio-grid .active-column .project-description-container .project-description {
-  display: none;
-  background: #ffffff;
-  width: 80%;
-  padding: 10px 20px;
+#portfolio #portfolio-grid .active-column .project-description-container .dft-btn {
+  display: block;
   margin: 0 auto;
-  margin-top: 40px;
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  border-radius: 15px;
+  margin-top: 20px;
+  text-transform: capitalize;
 }
-#portfolio #portfolio-grid .active-column .project-description-container .project-description p {
-  display: block;
-  font-size: 0.8em;
-  padding: 10px 0;
-  line-height: 1.8em;
+#portfolio #portfolio-grid .active-column .project-description-container .dft-btn:hover {
+  background: #262626;
 }
 #portfolio #portfolio-grid .not-active-column {
   -moz-box-sizing: border-box;
@@ -721,8 +702,20 @@ header .fullheight .scrolldown {
   margin-right: auto;
   height: 100%;
 }
+#portfolio #portfolio-grid .not-active-column .project-description-container {
+  display: block;
+  position: absolute;
+  top: 100px !important;
+  opacity: 0;
+}
 #portfolio #portfolio-grid .yellow {
   background: #fad53f;
+}
+#portfolio #portfolio-grid .yellow .project-description-container {
+  color: #000000;
+}
+#portfolio #portfolio-grid .yellow .project-description-container h3 {
+  color: #000000;
 }
 #portfolio #portfolio-grid .purple {
   background: #4e1656;

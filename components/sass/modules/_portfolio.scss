@@ -32,40 +32,32 @@
             width: 35%;
             float: left;
             position: relative;
-            @include transition;
-        }
-        .project {
-            display: block;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            @include transition;
+            @include transition;//column animation
             
-        }
-        .project-50 {
-            height: 50%;
-            width: 100%;
-            position: absolute;
-            .project-description {
-                display: none;
+            .project {
+                display: block;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                @include transition;//transform animation
             }
-        }
-        .top {
-            top: 0;
-        }
-        .bottom {
-            bottom: 0;
-        }
-        .expand {
-            content: '';
-            display: block;
-            position: relative;
-            bottom: 80px;
-            left: 20px;
-            width: 64px;
-            height: 64px;
-            background: url('../images/add-md.png') no-repeat;
-        }
+            
+            .project-50 {
+                height: 50%;
+                width: 100%;
+                position: absolute;
+            }//project-50
+            
+            .top {
+                top: 0;
+            }//top
+            .bottom {
+                bottom: 0;
+            }//bottom
+
+
+        }//column
+        
         .active-column {
             @include span(12);
             padding-left: 0;
@@ -73,52 +65,54 @@
             display: block;
             width: 65%;
             float: left;
-            
+
             .project-image {
                 display: block;
-                height: 100%;
-                width: 50%;
                 position: relative;
-                @include transition;
+                height: 100%;
+                width: 41%;
+                padding: 20px 0;
                 img {
                     display: block;
                     margin: 0 auto;
-                    padding: 20px 0;
                     position: absolute;
-                    left: 10%;
-                    
-                } 
-            }
+                    left: 15%;
+                    width: 100%;
+                    height: auto;
+                    @include transition;
+                }//img
+            }//project-image
             
             .project-description-container {
-                @include span(6 of 12);
                 display: block;
-                float: right;
-                @include breakpoint(max-width $medium) {
-                    @include span(12 of 12);
-                }
-                .project-description {
-                    display: none;
-                    background: $light;
-                    width: 80%;
-                    padding: 10px 20px;
+                position: absolute;
+                right: 8%;
+                top: 0;
+                width: 40%;
+                text-align: left;
+                color: $light;
+                opacity: 1;
+                @include transition;//text appearing from bottom
+                h3 {
+                    text-align: left;
+                    text-transform: capitalize;
+                    font-size: 3em;
+                    line-height: 1.2;
+                    margin-bottom: 20px;
+                    color: $light;
+                }//h3
+                .dft-btn {
+                    display: block;
                     margin: 0 auto;
-                    margin-top: 40px;
-                    @include border-radius(15px);
-                    h3 {
-
-                    }
-                    p {
-                        display: block;
-                        font-size: 0.8em;
-                        padding: 10px 0;
-                        line-height: 1.8em;
-                    }
-                }
-            }
-            
+                    margin-top: 20px;
+                    text-transform: capitalize;
+                }//boton
+                .dft-btn:hover {
+                    background: $darkgray;
+                }//boton
+            }//description
         }//active column
-        
+
         .not-active-column {
             @include span(12);
             padding-left: 0;
@@ -126,7 +120,7 @@
             display: block;
             width: 35%;
             float: left;
-            
+
             .project-image {
                 display: block;
                 height: 100%;
@@ -141,19 +135,32 @@
                     margin-left: auto;
                     margin-right: auto;
                     height: 100%;
-                    
-                }
-            }
-        }
+                }//img
+            }//project-image
+            
+            .project-description-container {
+                display: block;
+                position: absolute;
+                top: 100px!important;
+                opacity: 0;
+            }//description
+        }//not active column
         
-        .yellow {
-            background: $yellow;
-        }
-        .purple {
-            background: $purple;
-        }
-        .darkgray {
-            background: $darkgray;
-        }
+            .yellow {
+                background: $yellow;
+                .project-description-container {
+                    color: $dark;
+                    h3 {
+                        color: $dark;
+                    }//h3
+                }//project description
+            }//yellow
+            .purple {
+                background: $purple;
+            }//darkgray
+            .darkgray {
+                background: $darkgray;
+            }//darkgray
+        
     }    
 }

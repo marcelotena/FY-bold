@@ -112,12 +112,16 @@ $(function() {
     //centrar elementos en la columna activa
     var containerHeight = $('.active-column .project-image').height();
     $('.active-column .project-image img').css({
-        top: containerHeight/4-70,
-        bottom: containerHeight/4-70
+        top: containerHeight/4-20,
+        bottom: containerHeight/4-20
     });
     $('.not-active-column .project-image img').css({
         top: 0,
         bottom: 0
+    });
+    $('.active-column .project-description-container').css({
+            top: containerHeight/4-20,
+            bottom: containerHeight/4-20
     });
     
     $('.not-active-column .project:nth-child(1)').addClass('top');
@@ -146,12 +150,16 @@ $(function() {
         $('.not-active-column .project:nth-child(2)').addClass('bottom');
         
         $('.active-column .project-image img').css({
-            top: containerHeight/4-70,
-            bottom: containerHeight/4-70
+            top: containerHeight/4-20,
+            bottom: containerHeight/4-20
         });
         $('.not-active-column .project-image img').css({
             top: 0,
             bottom: 0
+        });
+        $('.active-column .project-description-container').css({
+            top: containerHeight/4-20,
+            bottom: containerHeight/4-20
         });
     });
     
