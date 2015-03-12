@@ -661,12 +661,47 @@ header .fullheight .scrolldown {
 }
 #portfolio #portfolio-grid .active-column .project-description-container .dft-btn {
   display: block;
+  position: relative;
   margin: 0 auto;
   margin-top: 20px;
   text-transform: capitalize;
   width: 50%;
   text-align: center;
   text-decoration: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+#portfolio #portfolio-grid .active-column .project-description-container .dft-btn:hover {
+  padding-right: 30px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+#portfolio #portfolio-grid .active-column .project-description-container .dft-btn:after {
+  position: absolute;
+  color: #ffffff;
+  display: inline-block;
+  content: '>';
+  opacity: 0;
+  right: 20px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+#portfolio #portfolio-grid .active-column .project-description-container .dft-btn:hover:after {
+  position: absolute;
+  display: inline-block;
+  content: '>';
+  opacity: 1;
+  right: 18px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 #portfolio #portfolio-grid .not-active-column {
   -moz-box-sizing: border-box;

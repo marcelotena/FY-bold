@@ -103,13 +103,36 @@
                 }//h3
                 .dft-btn {
                     display: block;
+                    position: relative;
                     margin: 0 auto;
                     margin-top: 20px;
                     text-transform: capitalize;
                     width: 50%;
                     text-align: center;
                     text-decoration: none;
+                    @include transition;
                 }//boton
+                .dft-btn:hover {
+                    padding-right: 30px;
+                    @include transition;
+                }
+                .dft-btn:after {
+                    position: absolute;
+                    color: $light;
+                    display: inline-block;
+                    content: '>';
+                    opacity: 0;
+                    right: 20px;
+                    @include transition;
+                }
+                .dft-btn:hover:after {
+                    position: absolute;
+                    display: inline-block;
+                    content: '>';
+                    opacity: 1;
+                    right: 18px;
+                    @include transition;
+                }
             }//description
         }//active column
 
