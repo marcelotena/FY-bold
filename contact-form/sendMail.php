@@ -1,5 +1,6 @@
 <?php
-$yourEmailAddress = 'info@fastandyours.com'; //Put your own email address here.
+
+$yourEmailAddress = 'marcelotena@fastandyours.com'; //Put your own email address here.
 
 	$subject=addslashes($_POST['subject']);
 	$comments=addslashes($_POST['message']);
