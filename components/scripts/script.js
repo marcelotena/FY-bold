@@ -8,6 +8,7 @@ $(function() {
         $('.scrolldown').css('left', 0.5*wwidth-32);
     
         $('.fullheight').css('height', wheight);
+        
     if (wwidth>650){
         $('.welcome-msg').css('top', wheight/2-240);
     }else{

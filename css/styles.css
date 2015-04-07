@@ -630,7 +630,12 @@ header .fullheight .scrolldown {
   padding-right: 0;
   display: block;
   width: 65%;
-  float: left;
+}
+@media (max-width: 950px) {
+  #portfolio #portfolio-grid .active-column {
+    width: 100%;
+    position: inherit;
+  }
 }
 #portfolio #portfolio-grid .active-column .project-image {
   display: block;
@@ -781,6 +786,17 @@ header .fullheight .scrolldown {
   }
   #portfolio #portfolio-grid .active-column .project-description-container .project-description .dft-btn {
     font-size: 1.2em;
+  }
+}
+@media (max-width: 1000px) {
+  #portfolio #portfolio-grid .active-column .project-description-container .project-description h3 {
+    font-size: 1.5em;
+  }
+  #portfolio #portfolio-grid .active-column .project-description-container .project-description p {
+    font-size: 0.8em;
+  }
+  #portfolio #portfolio-grid .active-column .project-description-container .project-description .dft-btn {
+    font-size: 1em;
   }
 }
 
