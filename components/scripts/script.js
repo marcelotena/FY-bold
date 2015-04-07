@@ -6,6 +6,7 @@ $(function() {
     
         $('.scrolldown').css('top', 0.5*wheight+70);
         $('.scrolldown').css('left', 0.5*wwidth-32);
+    
         $('.fullheight').css('height', wheight);
     if (wwidth>650){
         $('.welcome-msg').css('top', wheight/2-240);
@@ -30,8 +31,9 @@ $(function() {
     $(window).resize(function() {
         var wheight = $(window).height(), //get height of the window
         wwidth = $(window).width(); //get window width
-
+        
         $('.fullheight').css('height', wheight);
+        
         if (wwidth>650){
             $('.welcome-msg').css('top', wheight/2-240);
         }else{
@@ -111,18 +113,31 @@ $(function() {
     
     //centrar elementos en la columna activa
     var containerHeight = $('.active-column .project-image').height();
-    $('.active-column .project-image img').css({
-        top: containerHeight/4-20,
-        bottom: containerHeight/4-20
-    });
+    if (wwidth>1500){
+        $('.active-column .project-image img').css({
+            top: containerHeight/4-20,
+            bottom: containerHeight/4-20
+        });
+        $('.active-column .project-description-container').css({
+                top: containerHeight/4-20,
+                bottom: containerHeight/4-20
+        });
+    }//if wwidth>1500px
+    else {
+        $('.active-column .project-image img').css({
+            top: containerHeight/6-20,
+            bottom: containerHeight/6-20
+        });
+        $('.active-column .project-description-container').css({
+            top: containerHeight/6-20,
+            bottom: containerHeight/6-20
+        });
+    }
     $('.not-active-column .project-image img').css({
         top: 0,
         bottom: 0
     });
-    $('.active-column .project-description-container').css({
-            top: containerHeight/4-20,
-            bottom: containerHeight/4-20
-    });
+
     
     $('.not-active-column .project:nth-child(1)').addClass('top');
     $('.not-active-column .project:nth-child(2)').addClass('bottom');
@@ -149,18 +164,30 @@ $(function() {
         $('.not-active-column .project:nth-child(1)').addClass('top');
         $('.not-active-column .project:nth-child(2)').addClass('bottom');
         
-        $('.active-column .project-image img').css({
-            top: containerHeight/4-20,
-            bottom: containerHeight/4-20
-        });
         $('.not-active-column .project-image img').css({
             top: 0,
             bottom: 0
         });
-        $('.active-column .project-description-container').css({
-            top: containerHeight/4-20,
-            bottom: containerHeight/4-20
-        });
+        if (wwidth>1500){
+            $('.active-column .project-image img').css({
+                top: containerHeight/4-20,
+                bottom: containerHeight/4-20
+            });
+            $('.active-column .project-description-container').css({
+                    top: containerHeight/4-20,
+                    bottom: containerHeight/4-20
+            });
+        }//if wwidth>1500px
+        else {
+            $('.active-column .project-image img').css({
+                top: containerHeight/6-20,
+                bottom: containerHeight/6-20
+            });
+            $('.active-column .project-description-container').css({
+                top: containerHeight/6-20,
+                bottom: containerHeight/6-20
+            });
+        }
     });
     
     

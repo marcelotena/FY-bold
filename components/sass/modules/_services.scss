@@ -20,9 +20,9 @@
             display: none!important;
         }
     }
-    h2 {
-        text-transform: uppercase;
-    }
+    .section-header { 
+        padding-bottom: 0;
+    }//section-header
     #serviceslist {
         @include span(10);
         @include breakpoint(max-width 1500px){
@@ -146,6 +146,17 @@
             height: 25px;
             background: $gray;
         }
+    }//#metodologia
+    @include breakpoint (max-width 1200px){
+        #metodologia {
+            display: none;
+        }
+        .section-header {
+            padding-bottom: 30px;
+        }
+    }//para tamaño <=1200px ocultamos la sección metodología y ajustamos márgenes
+    @include breakpoint (max-width 650px) {
+        height: auto!important;
+        margin-bottom: 30px!important;
     }
-    
 }

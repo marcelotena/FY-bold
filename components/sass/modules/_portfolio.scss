@@ -107,7 +107,7 @@
                     margin: 0 auto;
                     margin-top: 20px;
                     text-transform: capitalize;
-                    width: 50%;
+                    width: 70%;
                     text-align: center;
                     text-decoration: none;
                     @include transition;
@@ -186,7 +186,23 @@
                 background: $darkgray;
             }//darkgray
         
-    }    
+    } 
+    //RESPONSIVE ADJUSTMENTS
+    @include breakpoint(max-width 1500px) {
+        #portfolio-grid .active-column .project-description-container {
+            .project-description {
+                h3 {
+                    font-size: 2em;
+                }
+                p {
+                    font-size: 0.8em;
+                }
+                .dft-btn {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
 }//portfolio
 
 #show-more {
@@ -196,3 +212,4 @@
     padding: 30px 0;
     font-size: 1.8em;
 }
+

@@ -348,8 +348,8 @@ header .fullheight .scrolldown {
     display: none !important;
   }
 }
-#services h2 {
-  text-transform: uppercase;
+#services .section-header {
+  padding-bottom: 0;
 }
 #services #serviceslist {
   -moz-box-sizing: border-box;
@@ -539,6 +539,20 @@ header .fullheight .scrolldown {
   height: 25px;
   background: #e5e5e5;
 }
+@media (max-width: 1200px) {
+  #services #metodologia {
+    display: none;
+  }
+  #services .section-header {
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 650px) {
+  #services {
+    height: auto !important;
+    margin-bottom: 30px !important;
+  }
+}
 
 #portfolio {
   max-width: 100%;
@@ -665,7 +679,7 @@ header .fullheight .scrolldown {
   margin: 0 auto;
   margin-top: 20px;
   text-transform: capitalize;
-  width: 50%;
+  width: 70%;
   text-align: center;
   text-decoration: none;
   -webkit-transition: all 0.5s ease-in-out;
@@ -757,6 +771,17 @@ header .fullheight .scrolldown {
 }
 #portfolio #portfolio-grid .darkgray {
   background: #262626;
+}
+@media (max-width: 1500px) {
+  #portfolio #portfolio-grid .active-column .project-description-container .project-description h3 {
+    font-size: 2em;
+  }
+  #portfolio #portfolio-grid .active-column .project-description-container .project-description p {
+    font-size: 0.8em;
+  }
+  #portfolio #portfolio-grid .active-column .project-description-container .project-description .dft-btn {
+    font-size: 1.2em;
+  }
 }
 
 #show-more {
