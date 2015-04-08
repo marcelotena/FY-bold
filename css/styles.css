@@ -569,7 +569,7 @@ header .fullheight .scrolldown {
 #portfolio .section-header {
   background: #000000;
   color: #ffffff;
-  position: absolute;
+  position: relative;
   top: 0;
 }
 #portfolio .section-header h2 {
@@ -577,7 +577,7 @@ header .fullheight .scrolldown {
 }
 #portfolio #portfolio-grid {
   float: left;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   overflow: hidden;
@@ -634,7 +634,6 @@ header .fullheight .scrolldown {
 @media (max-width: 950px) {
   #portfolio #portfolio-grid .active-column {
     width: 100%;
-    position: inherit;
   }
 }
 #portfolio #portfolio-grid .active-column .project-image {
@@ -818,26 +817,6 @@ header .fullheight .scrolldown {
   position: relative;
   /* AVISO LEGAL */
   /* BT DARK */
-}
-@media (max-width: 1200px) {
-  #contact {
-    margin-top: 260px;
-  }
-}
-@media (max-width: 960px) {
-  #contact {
-    margin-top: 300px;
-  }
-}
-@media (max-width: 650px) {
-  #contact {
-    margin-top: 850px;
-  }
-}
-@media (max-width: 400px) {
-  #contact {
-    margin-top: 900px;
-  }
 }
 #contact a {
   color: #0c00ed;

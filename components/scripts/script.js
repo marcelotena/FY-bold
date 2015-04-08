@@ -134,62 +134,80 @@ $(function() {
             bottom: containerHeight/6-20
         });
     }
-    $('.not-active-column .project-image img').css({
-        top: 0,
-        bottom: 0
-    });
-
-    
-    $('.not-active-column .project:nth-child(1)').addClass('top');
-    $('.not-active-column .project:nth-child(2)').addClass('bottom');
-    
-    $('.column .project').click(function(){
-        $('.project').addClass('project-50');
-        $(this).removeClass('project-50');
-        $('.active-column').addClass('not-active-column');
-        $('.active-column').removeClass('active-column');
-        $(this).parent('div').addClass('active-column');
-        $(this).parent('div').removeClass('not-active-column');
-        $('.not-active-column .project:nth-child(1)').addClass('top');
-        $('.not-active-column .project:nth-child(2)').addClass('bottom');
-    });
-    $('.column').click(function() {
-        $(this).addClass('active-column');
-        $('.active-column .project-50').appendTo($('.not-active-column'));
-        $('.active-column .project-50').removeClass('top');
-        $('.active-column .project-50').removeClass('bottom');
-        $('.active-column .project-50').css('height', '0%');
-        $('.active-column .project-50').remove();
-        $('.not-active-column .project').removeClass('top');
-        $('.not-active-column .project').removeClass('bottom');
-        $('.not-active-column .project:nth-child(1)').addClass('top');
-        $('.not-active-column .project:nth-child(2)').addClass('bottom');
-        
         $('.not-active-column .project-image img').css({
             top: 0,
             bottom: 0
         });
-        if (wwidth>1500){
-            $('.active-column .project-image img').css({
-                top: containerHeight/4-20,
-                bottom: containerHeight/4-20
+
+
+    if (wwidth<951) {
+        var projectHeight = $('.active-column .project:nth-child(1)').height();
+        $('.not-active-column').addClass('active-column');
+        $('.not-active-column').css('height', projectHeight*2);
+        $('.active-column').removeClass('not-active-column');
+        $('.project').removeClass('project-50');
+        $('.project').css('height', projectHeight);
+        $('.project:nth-child(2)').css('bottom', 0);
+        $('.active-column .project-image img').css({
+            top: containerHeight/6-20,
+            bottom: containerHeight/6-20
+        });
+        $('.active-column .project-description-container').css({
+            top: containerHeight/6-20,
+            bottom: containerHeight/6-20
+        });
+    }else{//wwidth>950px
+        $('.not-active-column .project:nth-child(1)').addClass('top');
+        $('.not-active-column .project:nth-child(2)').addClass('bottom');
+
+        $('.column .project').click(function(){
+            $('.project').addClass('project-50');
+            $(this).removeClass('project-50');
+            $('.active-column').addClass('not-active-column');
+            $('.active-column').removeClass('active-column');
+            $(this).parent('div').addClass('active-column');
+            $(this).parent('div').removeClass('not-active-column');
+            $('.not-active-column .project:nth-child(1)').addClass('top');
+            $('.not-active-column .project:nth-child(2)').addClass('bottom');
+        });
+        $('.column').click(function() {
+            $(this).addClass('active-column');
+            $('.active-column .project-50').appendTo($('.not-active-column'));
+            $('.active-column .project-50').removeClass('top');
+            $('.active-column .project-50').removeClass('bottom');
+            $('.active-column .project-50').css('height', '0%');
+            $('.active-column .project-50').remove();
+            $('.not-active-column .project').removeClass('top');
+            $('.not-active-column .project').removeClass('bottom');
+            $('.not-active-column .project:nth-child(1)').addClass('top');
+            $('.not-active-column .project:nth-child(2)').addClass('bottom');
+
+            $('.not-active-column .project-image img').css({
+                top: 0,
+                bottom: 0
             });
-            $('.active-column .project-description-container').css({
+            if (wwidth>1500){
+                $('.active-column .project-image img').css({
                     top: containerHeight/4-20,
                     bottom: containerHeight/4-20
-            });
-        }//if wwidth>1500px
-        else {
-            $('.active-column .project-image img').css({
-                top: containerHeight/6-20,
-                bottom: containerHeight/6-20
-            });
-            $('.active-column .project-description-container').css({
-                top: containerHeight/6-20,
-                bottom: containerHeight/6-20
-            });
-        }
-    });
+                });
+                $('.active-column .project-description-container').css({
+                        top: containerHeight/4-20,
+                        bottom: containerHeight/4-20
+                });
+            }//if wwidth>1500px
+            else {
+                $('.active-column .project-image img').css({
+                    top: containerHeight/6-20,
+                    bottom: containerHeight/6-20
+                });
+                $('.active-column .project-description-container').css({
+                    top: containerHeight/6-20,
+                    bottom: containerHeight/6-20
+                });
+            }
+        });
+    }//end wwidth>950px
     
     
     //CONTACT FORM

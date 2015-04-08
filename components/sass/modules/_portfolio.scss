@@ -9,7 +9,7 @@
     .section-header {
         background: $dark;
         color: $light;
-        position: absolute;
+        position: relative;
         top: 0;
         h2 {
             color: $light;
@@ -18,7 +18,7 @@
     
     #portfolio-grid {
         float: left;
-        position: absolute;
+        position: relative;
         bottom: 0;
         width: 100%;
         overflow: hidden;
@@ -64,7 +64,6 @@
             width: 65%;
             @include breakpoint(max-width 950px) {
                 width: 100%;
-                position: inherit;
             }
             
             .project-image {

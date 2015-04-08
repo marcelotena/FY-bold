@@ -9,18 +9,6 @@
     text-align: center;
     min-height: 750px;
     position: relative;
-    @include breakpoint(max-width $wide) {
-        margin-top: 260px;
-    }
-    @include breakpoint(max-width $medium) {
-        margin-top: 300px;
-    }
-    @include breakpoint(max-width $small) {
-        margin-top: 850px;
-    }
-    @include breakpoint(max-width $smallest) {
-        margin-top: 900px;
-    }
     
     a {
         color: $blue;
