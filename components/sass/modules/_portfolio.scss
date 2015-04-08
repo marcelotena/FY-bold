@@ -202,9 +202,9 @@
                 .dft-btn {
                     font-size: 1.2em;
                 }
-            }
-        }
-    }
+            }//project-description
+        }//project description container inside portfolio-grid
+    }//breakpoint 1500px
     @include breakpoint(max-width 1000px) {
         #portfolio-grid .active-column .project-description-container {
             .project-description {
@@ -217,9 +217,9 @@
                 .dft-btn {
                     font-size: 1em;
                 }
-            }
-        }
-    }
+            }//project-description
+        }//project description container inside portfolio-grid
+    }//breakpoint 1000px
 
 }//portfolio
 
