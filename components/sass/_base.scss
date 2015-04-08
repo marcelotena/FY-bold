@@ -18,6 +18,9 @@ body {
 
 h2 {
     font-size: 3em;
+    @include breakpoint (max-width 472px){
+        font-size: 2em;
+    }
 }
 
 h3 {

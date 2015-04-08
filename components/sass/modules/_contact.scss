@@ -16,11 +16,21 @@
     
     .section-header {
         margin-bottom: 20px;
+        @include breakpoint (max-width 472px){
+            margin-bottom: 0;
+            margin-top: 35px;
+            p {
+                margin-top: 5px;
+            }
+        }
     }
     
     #map {
         display: block;
         margin: 0 auto;
+        @include breakpoint (max-width 472px){
+            display: none;
+        }
     }
     
     #contact_form {
@@ -29,6 +39,10 @@
         form {
             width: 82.8%;
             position: absolute;
+            @include breakpoint (max-width 472px){
+                width: 100%;
+                position: inherit;
+            }
         }
     }
     
@@ -101,6 +115,9 @@
         position: relative;
         float: left;
         margin-right: 5px;
+        @include breakpoint (max-width 472px){
+            width:100%;
+        }
         
         :focus {
             border: 3px solid $blue;
@@ -113,7 +130,7 @@
         padding: 15px 15px;
         outline: none;
         height: 110px;
-        background: transparent; 
+        background: $light; 
         border: 3px solid $dark;
         color: #1a1b1b;
         font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
