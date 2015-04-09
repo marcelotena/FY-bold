@@ -134,10 +134,10 @@ $(function() {
             bottom: containerHeight/6-20
         });
     }
-        $('.not-active-column .project-image img').css({
-            top: 0,
-            bottom: 0
-        });
+    $('.not-active-column .project-image img').css({
+        top: 0,
+        bottom: 0
+    });
 
 
     if (wwidth<951) {
@@ -208,6 +208,19 @@ $(function() {
             }
         });
     }//end wwidth>950px
+        $(window).resize(function() {
+            if (wwidth>1500){
+                
+            }//if wwidth>1500px
+            else {
+                location.reload();
+            }
+            if (wwidth<951) {
+                location.reload();
+            }else{//wwidth>950px
+                
+            }//end wwidth>950px
+        });//si reescalamos la ventana, comprueba parámetros del portfolio
     
     
     //CONTACT FORM
