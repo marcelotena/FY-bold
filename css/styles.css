@@ -642,7 +642,7 @@ header .fullheight .scrolldown {
   display: block;
   width: 65%;
 }
-@media (max-width: 950px) {
+@media (max-width: 968px) {
   #portfolio #portfolio-grid .active-column {
     width: 100%;
   }
