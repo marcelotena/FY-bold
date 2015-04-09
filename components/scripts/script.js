@@ -61,9 +61,9 @@ $(function() {
         var wwidth = $(window).width(); //get window width
         var mediaOffset;
         if (wwidth>1200){mediaOffset=-31;}
-        if (wwidth<=1200){mediaOffset=180;}
-        if (wwidth<=960){mediaOffset=410;}
-        if (((windowpos >= $('#services').offset().top-31)&&(windowpos < $('#portfolio').offset().top+mediaOffset))||((windowpos >= $('#contact').offset().top-31))) {
+        if (wwidth<=1200){mediaOffset=-20;}
+        if (wwidth<=960){mediaOffset=-20;}
+        if (((windowpos >= $('#services').offset().top-31)&&(windowpos < $('#portfolio').offset().top+mediaOffset))||((windowpos >= $('#show-more').offset().top-31))) {
             $('#menu-launch').addClass('lightbackground');
             $('#brand-dark').css({
                 opacity: '1',
