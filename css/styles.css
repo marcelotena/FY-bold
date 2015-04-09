@@ -666,6 +666,15 @@ header .fullheight .scrolldown {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
+@media (max-width: 580px) {
+  #portfolio #portfolio-grid .active-column .project-image {
+    width: 70%;
+    position: absolute;
+    float: left;
+    top: 13%;
+    margin-left: 5%;
+  }
+}
 #portfolio #portfolio-grid .active-column .project-description-container {
   display: block;
   position: absolute;
@@ -675,6 +684,7 @@ header .fullheight .scrolldown {
   text-align: left;
   color: #ffffff;
   opacity: 1;
+  z-index: 99999;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -731,6 +741,24 @@ header .fullheight .scrolldown {
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+@media (max-width: 580px) {
+  #portfolio #portfolio-grid .active-column .project-description-container {
+    width: 75%;
+    right: 12%;
+  }
+  #portfolio #portfolio-grid .active-column .project-description-container .project-description h3 {
+    margin-top: -5%;
+  }
+  #portfolio #portfolio-grid .active-column .project-description-container .project-description p {
+    display: none;
+  }
+  #portfolio #portfolio-grid .active-column .project-description-container .dft-btn {
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    bottom: 5%;
+  }
 }
 #portfolio #portfolio-grid .not-active-column {
   -moz-box-sizing: border-box;

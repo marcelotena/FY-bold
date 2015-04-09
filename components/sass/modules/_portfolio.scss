@@ -81,6 +81,13 @@
                     height: auto;
                     @include transition;
                 }//img
+                @include breakpoint (max-width 580px) {
+                    width: 70%;
+                    position: absolute;
+                    float: left;
+                    top: 13%;
+                    margin-left: 5%;
+                }
             }//project-image
             
             .project-description-container {
@@ -92,6 +99,7 @@
                 text-align: left;
                 color: $light;
                 opacity: 1;
+                z-index: 99999;
                 @include transition;//text appearing from bottom
                 h3 {
                     text-align: left;
@@ -133,6 +141,24 @@
                     right: 18px;
                     @include transition;
                 }
+                @include breakpoint (max-width 580px) {
+                    width: 75%;
+                    right: 12%;
+                    .project-description {
+                        h3 {
+                            margin-top: -5%;
+                        }
+                        p {
+                            display: none;
+                        }
+                    }
+                    .dft-btn {
+                        width: 80%;
+                        position: absolute;
+                        left: 10%;
+                        bottom: 5%;
+                    }
+                }//breakpoint 580px
             }//description
         }//active column
 
@@ -219,6 +245,9 @@
             }//project-description
         }//project description container inside portfolio-grid
     }//breakpoint 1000px
+    @include breakpoint (max-width 580px) {
+        
+    }//breakpoint 580px
 
 }//portfolio
 
