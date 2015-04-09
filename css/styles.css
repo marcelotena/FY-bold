@@ -642,7 +642,7 @@ header .fullheight .scrolldown {
   display: block;
   width: 65%;
 }
-@media (max-width: 968px) {
+@media (max-width: 971px) {
   #portfolio #portfolio-grid .active-column {
     width: 100%;
   }
@@ -665,6 +665,12 @@ header .fullheight .scrolldown {
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+@media (min-width: 581px) and (max-width: 971px) {
+  #portfolio #portfolio-grid .active-column .project-image {
+    position: absolute;
+    top: 13% !important;
+  }
 }
 @media (max-width: 580px) {
   #portfolio #portfolio-grid .active-column .project-image {
@@ -742,6 +748,12 @@ header .fullheight .scrolldown {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
+@media (min-width: 581px) and (max-width: 971px) {
+  #portfolio #portfolio-grid .active-column .project-description-container {
+    position: absolute;
+    top: 17% !important;
+  }
+}
 @media (max-width: 580px) {
   #portfolio #portfolio-grid .active-column .project-description-container {
     width: 75%;
@@ -757,7 +769,7 @@ header .fullheight .scrolldown {
     width: 80%;
     position: absolute;
     left: 10%;
-    bottom: 5%;
+    bottom: 1%;
   }
 }
 #portfolio #portfolio-grid .not-active-column {

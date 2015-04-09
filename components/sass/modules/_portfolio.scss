@@ -62,7 +62,7 @@
             padding-right: 0;
             display: block;
             width: 65%;
-            @include breakpoint(max-width 968px) {
+            @include breakpoint(max-width 971px) {
                 width: 100%;
             }
             
@@ -81,6 +81,10 @@
                     height: auto;
                     @include transition;
                 }//img
+                @include breakpoint (581px 971px) {
+                    position: absolute;
+                    top: 13%!important;
+                }
                 @include breakpoint (max-width 580px) {
                     width: 70%;
                     position: absolute;
@@ -141,6 +145,10 @@
                     right: 18px;
                     @include transition;
                 }
+                @include breakpoint (581px 971px) {
+                    position: absolute;
+                    top: 17%!important;
+                }
                 @include breakpoint (max-width 580px) {
                     width: 75%;
                     right: 12%;
@@ -156,7 +164,7 @@
                         width: 80%;
                         position: absolute;
                         left: 10%;
-                        bottom: 5%;
+                        bottom: 1%;
                     }
                 }//breakpoint 580px
             }//description
