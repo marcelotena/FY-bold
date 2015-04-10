@@ -10,6 +10,7 @@ var jsSources = [
     //'components/scripts/*******.js'
     'components/scripts/jqloader.js',
     'components/scripts/menulateral-jquery.js',
+    'components/scripts/jquery.fancybox.js',
     'components/scripts/script.js'
 ];
 var sassSources = ['components/sass/styles.scss'];
