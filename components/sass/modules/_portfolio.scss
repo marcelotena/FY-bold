@@ -256,7 +256,18 @@
     @include breakpoint (max-width 580px) {
         
     }//breakpoint 580px
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
 
+        .active-column, .not-active-column {
+            min-height: 600px!important;
+        }
+    }//Dispositivos de alta definición
 }//portfolio
 
 #show-more {

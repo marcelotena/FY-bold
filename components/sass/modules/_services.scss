@@ -159,4 +159,21 @@
         height: auto!important;
         margin-bottom: 30px!important;
     }
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+
+        #metodologia {
+            display: none;
+        }
+        .section-header {
+            padding-bottom: 30px;
+        }
+        height: auto!important;
+        margin-bottom: 100px!important;
+    }//Dispositivos de alta definición
 }

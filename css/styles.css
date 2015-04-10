@@ -564,6 +564,18 @@ header .fullheight .scrolldown {
     margin-bottom: 30px !important;
   }
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  #services {
+    height: auto !important;
+    margin-bottom: 100px !important;
+  }
+  #services #metodologia {
+    display: none;
+  }
+  #services .section-header {
+    padding-bottom: 30px;
+  }
+}
 
 #portfolio {
   max-width: 100%;
@@ -847,6 +859,11 @@ header .fullheight .scrolldown {
   }
   #portfolio #portfolio-grid .active-column .project-description-container .project-description .dft-btn {
     font-size: 1em;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  #portfolio .active-column, #portfolio .not-active-column {
+    min-height: 600px !important;
   }
 }
 
