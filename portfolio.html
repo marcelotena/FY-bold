@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD SECTION -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Marcelo Tena Vicente">
+    <title>Fast and Yours - Estudio de diseño y programación web en Barcelona - Portfolio</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/ico" href="favicon.ico"/>
+</head>
+<!--END HEAD SECTION -->
+    
+<body>
+    <script>
+        //GENERADOR DE EMAIL CON LINK "MAILTO"	
+        usuario="info";
+        dominio="fastandyours.com";
+        conector="@";
+
+        function dame_correo(){ 
+           return usuario + conector + dominio;
+        } 
+
+        function escribe_enlace_correo(){ 
+           document.write("<a id='email' href='mailto:" + dame_correo() + "'>" + dame_correo() + "</a>"); 
+        }
+    </script>
+<div id="menu-wrap">
+<header id="intro-portfolio">
+    <article>
+        <div class="brand"><a href="#intro"><img src="images/logo-text.png" alt="fast and yours"></a></div>
+        <a id="menu-launch" href="#main-nav" class="lateral"></a>
+        <nav id="main-nav" class="navbar">
+            <ul>
+                <li class="main"><a href="#intro">Inicio</a></li>
+                <li class="main"><a href="#services">¿Qué hacemos?</a></li>
+                <li class="main"><a href="#portfolio">Portfolio</a></li>
+                <li class="main"><a href="#contact">Contacto</a></li>
+                <li class="nav-extras">
+                    <ul>
+                        <!--<li><a href="#">Newsletter</a></li>-->
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </li>
+                <li class="social">
+                    <ul>
+                        <li><a href="www.facebook.com/fastandyours" target="_blank"><img src="images/facebook-white.png" alt="facebook"></a></li>
+                        <li><a href="www.twitter.com/fastandyours" target="_blank"><img src="images/twitter-white.png" alt="twitter"></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- navbar -->
+        </nav>    
+    </article>
+</header><!-- end #intro-portfolio -->
+<section id="project-grid" class="">
+    
+</section><!-- END PROJECT-GRID -->
+
+<section id="contact" class="fullheight">
+    <div class="section-header">
+        <h2>¿Qué necesitas?</h2>
+        <p>Te invitamos a enviarnos un mensaje si quieres saber más o, si lo prefieres, puedes llamarnos al (+34)&nbsp;722&nbsp;760&nbsp;260</p>
+    </div>
+    
+    <!-- GOOGLE MAP -->
+	<div id="map" style="height:23%; width:80%;"></div>
+    
+    <!-- CONTACT FORM -->			
+    <div id="contact_form" class="animated fadeInDown">
+						
+        <!-- Sucess Message -->
+        <div class="form-success">
+            <p><i class="fa fa-check"></i>Gracias, tu mensaje ha sido enviado.</p>
+        </div>
+				        
+        <!-- Begin form -->
+        <div class="contact-form"> 
+            <form action="contact-form/sendMail.php" method="post" class="form">   	
+				<div class="name">
+				    <input class="text" type="text" name="name" placeholder="NOMBRE"> 
+				</div>
+				<div class="email">  
+				    <input class="text" type="text" name="email" placeholder="EMAIL"> 
+				</div>
+				<div class="subject">    
+				    <input class="text" type="text" name="subject" placeholder="ASUNTO">
+				</div>
+				            	
+				<input class="service-input" type="text" name="service" style="display:none;" >
+				            	
+				<div class="message">    
+				    <textarea name="message" rows="8" cols="60" placeholder="MENSAJE"></textarea> 
+                </div>
+                                
+				<div id="aviso-legal" class="condiciones">
+                    <label><input type="checkbox" id="checkbox" name="condiciones">He leído y acepto el <a class="fancybox" data-fancybox-type="iframe" href="avisolegal.html">aviso legal</a>.</label>
+                </div>
+				                
+				<div class="bt-contact">
+				    <button class="des-button-dark des-button-dark-1 des-button-dark-1d" type="submit" id="submitButton" name="submit"><span>ENVIAR EMAIL</span></button>
+				</div>
+				                    
+				<div class="loading"></div>
+				                
+            </form> 
+        </div>
+        <!-- End form -->
+    </div>
+    <!-- END CONTACT FORM -->
+    <section id="footer">
+    <div id="footer-container">
+        <div class="col-footer">(+34) 722 760 260<br><script>escribe_enlace_correo();</script></div>
+        <div id="legal-links" class="col-footer">
+            <a class="fancybox" data-fancybox-type="iframe" href="docs/avisolegal.html">Aviso legal</a> | <a class="fancybox" data-fancybox-type="iframe" href="docs/politica-cookies.html">Política de cookies</a>
+        </div>
+        <div class="col-footer">
+            <ul>
+                <li><a href="www.facebook.com/fastandyours" target="_blank"><img src="images/facebook-white.png" alt="facebook"></a></li>
+                <li><a href="www.twitter.com/fastandyours" target="_blank"><img src="images/twitter-white.png" alt="twitter"></a></li>
+            </ul>
+        </div>
+    </div>
+    </section>
+</section><!-- END CONTACT -->
+
+</div><!-- END MENU WRAP -->
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript">
+		function mapinitialize() {
+			var latlng = new google.maps.LatLng(41.405165,2.155553);
+			var myOptions = {
+				zoom: 17,
+				center: latlng,
+				scrollwheel: false,
+				scaleControl: false,
+				disableDefaultUI: false,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(document.getElementById("map"),myOptions);
+			
+			var image = "images/mappin.png";
+			var marker = new google.maps.Marker({
+				map: map, 
+				icon: image,
+				position: map.getCenter()
+			});
+			
+			var contentString = 'Local 7Dos<br> C/ Verdi 72';
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+						
+			google.maps.event.addListener(marker, 'click', function() {
+			  infowindow.open(map,marker);
+			});
+							
+				
+		}
+		mapinitialize();
+	</script>
+</body>
+</html>
