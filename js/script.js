@@ -2577,10 +2577,26 @@ $(function() {
     
     //PORTFOLIO PAGE
     if ($('#homepage').length){}else{
-        
+        //load masonry
+        var container = document.querySelector('#masonry-portfolio');
+        var msnry = new Masonry( container, {
+            columnWidth: 481,
+            gutter: 50,
+            itemSelector: '.proyecto',
+            isAnimated: true,
+            percentPosition: true
+        });
         
     }//si no es la página principal...
 
+    //preloader
+    //<![CDATA[
+        $(window).load(function() { // makes sure the whole site is loaded
+            $('#status').fadeOut(); // will first fade out the loading animation
+            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.                
+            $('body').delay(350).css({'overflow':'visible'});
+        })
+    //]]>
 });//document ready
 
 

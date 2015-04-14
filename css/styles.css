@@ -61,10 +61,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font: 400 1em/1.5em "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #ffffff;
   color: #000000;
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -106,9 +111,39 @@ p {
   background: #000000;
   border: none;
   padding: 10px 20px;
+  border-radius: 15px;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
-  border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* change if the mask should have another color then white */
+  z-index: 9999999999;
+  /* makes sure it stays on top */
+}
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  background-image: url(../images/status.gif);
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
 }
 
 body {
@@ -1220,6 +1255,10 @@ header .fullheight .scrolldown {
 #portfolio-page #masonry-portfolio .proyecto {
   max-width: 481px;
   margin-bottom: 50px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 #portfolio-page #masonry-portfolio .proyecto img {
   width: 100%;
@@ -1253,8 +1292,40 @@ header .fullheight .scrolldown {
 #portfolio-page #masonry-portfolio .darkgray {
   background: #262626;
 }
+#portfolio-page #masonry-portfolio .green {
+  background: #118f40;
+}
+#portfolio-page #masonry-portfolio .bluenet {
+  background: #5e9cd1;
+}
 #portfolio-page #contact {
   background: #ffffff;
+}
+#portfolio-page #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  /* change if the mask should have another color then white */
+  z-index: 9999999999;
+  /* makes sure it stays on top */
+}
+#portfolio-page #status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  background-image: none;
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
 }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
