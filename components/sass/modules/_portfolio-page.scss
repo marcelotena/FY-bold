@@ -7,22 +7,56 @@
         position: fixed;
         padding: 20px;
         z-index: 1;
-        img {
+        width: 165px;
+        height: 120px;
+        background: url(../images/logo-text.png) no-repeat 20px 20px;
+        a {
             width: 125px;
-            height: auto;
+            height: 80px;
+            display: block;
+        }
+        @include breakpoint (max-width 680px){
+            display: none;
+        }
+    }
+    .brand-dark {
+        background: url(../images/logo-dark.png) no-repeat 20px 20px;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+    }
+    #intro-portfolio {
+        .section-header h2 {
+            color: $light;
+            margin-bottom: 20px;
         }
     }
     #masonry-portfolio {
-        width: 100%;
-        height: auto;
+        top: 150px;
+        margin: 0 20px;
+        margin-bottom: 150px;
         
-        .project {
-            width: 23%;
-            height: 500px;
+        .proyecto {
+            max-width: 481px;
+            margin-bottom: 50px;
+            img {
+                width: 100%;
+                padding: 20px;
+                padding-top: 30px;
+            }
         }
-        .project.w2 {
-            width: 50%;
+        @include breakpoint (min-width 1500px){
+            left: 15%;
         }
+        @include breakpoint (min-width 1600px){
+            left: 3%;
+        }
+        @include breakpoint (min-width 1750px){
+            left: 8%;
+        }
+        
+        
         
         //Colores
         .yellow {
@@ -38,4 +72,5 @@
     #contact {
         background: $light;
     }
+    
 }//portfolio page body

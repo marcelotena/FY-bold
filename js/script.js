@@ -2274,29 +2274,34 @@ $(function() {
         if (wwidth>1200){mediaOffset=-31;}
         if (wwidth<=1200){mediaOffset=-20;}
         if (wwidth<=960){mediaOffset=-20;}
-        if (((windowpos >= $('#services').offset().top-31)&&(windowpos < $('#portfolio').offset().top+mediaOffset))||((windowpos >= $('#show-more').offset().top-31))) {
-            $('#menu-launch').addClass('lightbackground');
-            $('#brand-dark').css({
-                opacity: '1',
-                left: '20px',
-                background: 'url(./images/logo-dark.png) no-repeat'
-            });
+        if ($('#homepage').length){
+            if (((windowpos >= $('#services').offset().top-31)&&(windowpos < $('#portfolio').offset().top+mediaOffset))||((windowpos >= $('#show-more').offset().top-31))) {
+                $('#menu-launch').addClass('lightbackground');
+                $('#brand-dark').css({
+                    opacity: '1',
+                    left: '20px',
+                    background: 'url(./images/logo-dark.png) no-repeat'
+                });
+            }else{
+                $('#menu-launch').removeClass('lightbackground');
+                $('#brand-dark').css({
+                    background: 'url(./images/logo-text.png) no-repeat'
+                });
+            }
+            if (windowpos < $('#services').offset().top-31) {
+                $('#brand-dark').css({
+                    opacity: '0',
+                    left: '-100px'
+                });
+            }
         }else{
-            $('#menu-launch').removeClass('lightbackground');
-            $('#brand-dark').css({
-                background: 'url(./images/logo-text.png) no-repeat'
-            });
-        }
-        if (windowpos < $('#services').offset().top-31) {
-            $('#brand-dark').css({
-                opacity: '0',
-                left: '-100px'
-            });
-        }
-        if (windowpos >= $('#portfolio-page #contact').offset().top) {
-            $('#menu-launch').addClass('lightbackground');
-        }else{
-            $('#menu-launch').removeClass('lightbackground');
+            if (windowpos >= $('#portfolio-page #contact').offset().top-31) {
+                $('#menu-launch').addClass('lightbackground');
+                $('.brand').addClass('brand-dark');
+            }else{
+                $('#menu-launch').removeClass('lightbackground');
+                $('.brand').removeClass('brand-dark');
+            }
         }
             
         //COMPROBAMOS SI SE HA ABIERTO EL MENÚ O SI ESTAMOS EN FONDO CLARO/OSCURO
@@ -2568,6 +2573,13 @@ $(function() {
             }
         })
     });
+    
+    
+    //PORTFOLIO PAGE
+    if ($('#homepage').length){}else{
+        
+        
+    }//si no es la página principal...
 
 });//document ready
 

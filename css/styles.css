@@ -1187,21 +1187,59 @@ header .fullheight .scrolldown {
   position: fixed;
   padding: 20px;
   z-index: 1;
+  width: 165px;
+  height: 120px;
+  background: url(../images/logo-text.png) no-repeat 20px 20px;
 }
-#portfolio-page .brand img {
+#portfolio-page .brand a {
   width: 125px;
-  height: auto;
+  height: 80px;
+  display: block;
+}
+@media (max-width: 680px) {
+  #portfolio-page .brand {
+    display: none;
+  }
+}
+#portfolio-page .brand-dark {
+  background: url(../images/logo-dark.png) no-repeat 20px 20px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+#portfolio-page #intro-portfolio .section-header h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 #portfolio-page #masonry-portfolio {
+  top: 150px;
+  margin: 0 20px;
+  margin-bottom: 150px;
+}
+#portfolio-page #masonry-portfolio .proyecto {
+  max-width: 481px;
+  margin-bottom: 50px;
+}
+#portfolio-page #masonry-portfolio .proyecto img {
   width: 100%;
-  height: auto;
+  padding: 20px;
+  padding-top: 30px;
 }
-#portfolio-page #masonry-portfolio .project {
-  width: 23%;
-  height: 500px;
+@media (min-width: 1500px) {
+  #portfolio-page #masonry-portfolio {
+    left: 15%;
+  }
 }
-#portfolio-page #masonry-portfolio .project.w2 {
-  width: 50%;
+@media (min-width: 1600px) {
+  #portfolio-page #masonry-portfolio {
+    left: 3%;
+  }
+}
+@media (min-width: 1750px) {
+  #portfolio-page #masonry-portfolio {
+    left: 8%;
+  }
 }
 #portfolio-page #masonry-portfolio .yellow {
   background: #fad53f;

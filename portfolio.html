@@ -30,18 +30,16 @@
 <div id="menu-wrap">
 <header id="intro-portfolio">
     <article>
-        <div class="brand"><a href="#intro"><img src="images/logo-text.png" alt="fast and yours"></a></div>
+        <div class="brand"><a href="#intro-portfolio"></a></div>
         <a id="menu-launch" href="#main-nav" class="lateral"></a>
         <nav id="main-nav" class="navbar">
             <ul>
-                <li class="main"><a href="#intro">Inicio</a></li>
-                <li class="main"><a href="#services">¿Qué hacemos?</a></li>
-                <li class="main"><a href="#portfolio">Portfolio</a></li>
+                <li class="main"><a href="index.html">Inicio</a></li>
                 <li class="main"><a href="#contact">Contacto</a></li>
                 <li class="nav-extras">
                     <ul>
                         <!--<li><a href="#">Newsletter</a></li>-->
-                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="www.fastandyours.com/blog">Blog</a></li>
                     </ul>
                 </li>
                 <li class="social">
@@ -54,15 +52,17 @@
             <!-- navbar -->
         </nav>    
     </article>
-    <section id="masonry-portfolio" class="">
-        <div class="project w2 purple"></div>
-        <div class="project gray"></div>
-        <div class="project yellow"></div>
-        <div class="project darkgray"></div>
-        <div class="project yellow"></div>
-        <div class="project purple"></div>
-        <div class="project darkgray"></div>
-    </section><!-- END PROJECT-GRID -->
+    <div class="section-header">
+        <h2>Portfolio</h2>
+    </div>
+    <ul id="masonry-portfolio" class="">
+        <div class="proyecto purple"><img src="images/portfolio/herdingcats.png" alt="herding cats game developer fast and yours front end web development"></div>
+        <li class="proyecto darkgray"><img src="images/portfolio/finquesurgell.png" alt="finques urgell inmobiliaria fast and yours front end web development"></li>
+        <li class="proyecto yellow"><img src="images/portfolio/securitas.png" alt="super securitas olloqui studio fast and yours front end web development"></li>
+        <li class="proyecto darkgray"><img src="images/portfolio/finquesurgell.png" alt="finques urgell inmobiliaria fast and yours front end web development"></li>
+        <li class="proyecto yellow"><img src="images/portfolio/securitas.png" alt="super securitas olloqui studio fast and yours front end web development"></li>
+        <li class="proyecto purple"><img src="images/portfolio/herdingcats.png" alt="finques urgell inmobiliaria fast and yours front end web development"></li>
+    </ul><!-- END PROJECT-GRID -->
 </header><!-- end #intro-portfolio -->
 
 
@@ -140,9 +140,11 @@
         //load masonry
         var container = document.querySelector('#masonry-portfolio');
         var msnry = new Masonry( container, {
-            columnWidth: 500,
-            itemSelector: '.project',
-            isAnimated: true
+            columnWidth: 481,
+            gutter: 50,
+            itemSelector: '.proyecto',
+            isAnimated: true,
+            percentPosition: true
         });
     </script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
