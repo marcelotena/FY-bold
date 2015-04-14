@@ -1,0 +1,41 @@
+// portfolio-page.scss
+// ==================
+
+#portfolio-page {
+    background: $dark;
+    .brand {
+        position: fixed;
+        padding: 20px;
+        z-index: 1;
+        img {
+            width: 125px;
+            height: auto;
+        }
+    }
+    #masonry-portfolio {
+        width: 100%;
+        height: auto;
+        
+        .project {
+            width: 23%;
+            height: 500px;
+        }
+        .project.w2 {
+            width: 50%;
+        }
+        
+        //Colores
+        .yellow {
+            background: $yellow;
+        }//yellow
+        .purple {
+            background: $purple;
+        }//darkgray
+        .darkgray {
+            background: $darkgray;
+        }//darkgray
+    }//portfolio masonry grid 
+    #contact {
+        background: $light;
+    }
+}//portfolio page body

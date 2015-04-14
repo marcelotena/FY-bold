@@ -1180,6 +1180,42 @@ header .fullheight .scrolldown {
   color: #ffffff;
 }
 
+#portfolio-page {
+  background: #000000;
+}
+#portfolio-page .brand {
+  position: fixed;
+  padding: 20px;
+  z-index: 1;
+}
+#portfolio-page .brand img {
+  width: 125px;
+  height: auto;
+}
+#portfolio-page #masonry-portfolio {
+  width: 100%;
+  height: auto;
+}
+#portfolio-page #masonry-portfolio .project {
+  width: 23%;
+  height: 500px;
+}
+#portfolio-page #masonry-portfolio .project.w2 {
+  width: 50%;
+}
+#portfolio-page #masonry-portfolio .yellow {
+  background: #fad53f;
+}
+#portfolio-page #masonry-portfolio .purple {
+  background: #4e1656;
+}
+#portfolio-page #masonry-portfolio .darkgray {
+  background: #262626;
+}
+#portfolio-page #contact {
+  background: #ffffff;
+}
+
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap,
 .fancybox-skin,
