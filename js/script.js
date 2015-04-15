@@ -2360,7 +2360,7 @@ $(function() {
         bottom: 0
     });
 
-
+    
     if (wwidth<951) {
         if (isRetina()||isHighDensity()){
             $('.active-column').css('height', 'auto');
@@ -2450,20 +2450,12 @@ $(function() {
             }
         });
     }//end wwidth>950px
-        /*$(window).resize(function() {
-            if (wwidth>1500){
-                
-            }//if wwidth>1500px
-            else {
-                location.reload();
-            }
-            if (wwidth<951) {
-                location.reload();
-            }else{//wwidth>950px
-                
-            }//end wwidth>950px
-        });//si reescalamos la ventana, comprueba parámetros del portfolio*/
     
+    
+    
+    $(window).resize(function() {
+        
+    });//window resize
     
     //CONTACT FORM
     if ($('#contact_form').length){
