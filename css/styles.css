@@ -992,7 +992,7 @@ header .fullheight .scrolldown {
   max-width: 100%;
 }
 #contact .form input.hightlight, #contact .form textarea.hightlight {
-  border: 1px solid #E45942;
+  border: 3px solid #E45942;
 }
 #contact .contacts {
   width: 100%;

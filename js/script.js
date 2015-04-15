@@ -2478,7 +2478,7 @@ $(function() {
 	}
 	
 	//if submit button is clicked
-	$('.contact-form #submitButton').click(function () {		
+	/*$('.contact-form #submitButton').click(function () {		
 	if(document.getElementById('checkbox').checked == true){
 		$(this).find('[placeholder]').each(function() {
 			var input = $(this);
@@ -2509,11 +2509,6 @@ $(function() {
 			return false;
 		} else email.removeClass('hightlight');	  
 		
-		if (comment.val()=='') {
-			comment.addClass('hightlight');
-			return false;
-		} else comment.removeClass('hightlight');
-		
 		//organize the data properly
 		var data = 'name=' + name.val() + '&email=' + email.val() + '&subject=' + 
 		subject.val() + '&comment='  + encodeURIComponent(comment.val());
@@ -2521,37 +2516,8 @@ $(function() {
 		//disabled all the text fields
 		$('.contact input, .contact textarea').attr('disabled','true');
 		
-		//show the loading sign
-		$('.loading').show();
-		
-		//start the ajax
-		$.ajax({
-			//this is the php file that processes the data and send mail
-			url: "contact-form/send.php",	
-			type: "GET",
-			data: data,				
-			cache: false,
-			
-			//success
-			success: function (html) {				
-				//if process.php returned 1/true (send mail success)
-				if (html==1) {					
-					//clear the form
-					$('.contact-form input, .contact-form textarea').val('');
-					$('.contact-form select').val($('.contact-form select option').eq(0).val());
-					
-					//show the success message
-					$('.form-success').slideDown('slow');
-					setTimeout(function(){
-						$('.form-success').slideUp('slow');
-					}, 5000);
-					
-				//if process.php returned 0/false (send mail failed)
-				} else alert('Ha ocurrido un error inesperado. Por favor pruebe más tarde.');				
-			}		
-		});
 		return false;} else alert ('Debes leer y estar de acuerdo con el Aviso Legal antes de enviar los datos del formulario.');//fin gran-if para comprobar si se ha marcado el checkbox, sino no envía nada
-	});
+	});*/
     //END CONTACT FORM SCRIPT
     
 

@@ -12,6 +12,12 @@ if(trim($_POST['name']) == '') {
 	$name = trim($_POST['name']);
 }
 
+if (!isset($_POST['condiciones'])) {
+    $hasError = true;
+    $message = "Debes leer y estar de acuerdo con el Aviso Legal antes de enviar los datos del formulario.";
+    echo "<script type='text/javascript'>alert('$message');</script>";
+}
+
 //Check to make sure that the last name field is not empty
 /*if(trim($_POST['contactlast']) == '') {
 	$hasError = true;
