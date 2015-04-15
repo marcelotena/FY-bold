@@ -53,7 +53,7 @@ EOD;
 	$valid = mail($emailTo, "Mensaje de ".$name." utilizando el formulario de Fast&amp;Yours", $body, $headers);
 	if ($valid) {
         echo <<<EOD
-<div id="success" class="sent success"><p><img src="../images/logo-dark.png" style="width:125px;height:80px;"></p><p style="color:#002f40;margin-top:30px;font-size: large;font-family: Arial, Helvetica, sans-serif;"><strong>¡E-mail enviado correctamente!</strong><br>Gracias por contactar con Fast&amp;Yours. En breve nos pondremos en contacto contigo.</p><br>
+<div id="success" class="sent success"><p><img src="../images/logo-dark.png" style="width:125px;height:80px;"></p><p style="color:#002f40;margin-top:30px;font-size: large;font-family: Arial, Helvetica, sans-serif;"><strong>&iexclE-mail enviado correctamente!</strong><br>Gracias por contactar con Fast&amp;Yours. En breve nos pondremos en contacto contigo.</p><br>
 	<p><a href="index.html" onClick="history.back();return false;" style="color:#002f40;font-family: Arial, Helvetica, sans-serif;">Volver a Fast&amp;Yours</a></p></div>
 EOD;
     }

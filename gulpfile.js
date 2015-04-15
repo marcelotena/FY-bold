@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     browserify = require('gulp-browserify'),
     compass = require('gulp-compass'),
     connect = require('gulp-connect'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    imagesLoaded = require('imagesloaded');
 
 var jsSources = [
     //añade aquí archivos .js para concatenar en el script final
