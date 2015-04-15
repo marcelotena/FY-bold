@@ -10,6 +10,9 @@
     background: $dark;
     -webkit-box-shadow: none;
     box-shadow: none;
+    @include breakpoint (max-width $small) {
+        width: 250px;
+    }
     ul {
         float: left;
         padding: 15%;
@@ -62,6 +65,9 @@
           text-decoration: none;
           position: absolute;
           z-index: 1;
+            @include breakpoint (max-width $small) {
+                font-size: 20px;
+            }
         }
         &:before {
             content: '';
@@ -92,6 +98,9 @@
         }
         &:hover:after {
           width: 100%;
+            @include breakpoint (max-width $small) {
+                display: none;
+            }
         }
     }
 }//pageslide
@@ -110,6 +119,12 @@
     transition: all 0.25s ease-in-out;
     z-index: 99999;
 }
+@include breakpoint (max-width $small) {
+    .lateral.abierto {
+        right: 250px;
+    }
+}
+
 
 #menu-launch {
     width: 50px;

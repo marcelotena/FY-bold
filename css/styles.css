@@ -268,6 +268,11 @@ header .fullheight .scrolldown {
 #pageslide:after {
   clear: both;
 }
+@media (max-width: 650px) {
+  #pageslide {
+    width: 250px;
+  }
+}
 #pageslide ul {
   float: left;
   padding: 15%;
@@ -318,6 +323,11 @@ header .fullheight .scrolldown {
   position: absolute;
   z-index: 1;
 }
+@media (max-width: 650px) {
+  #pageslide ul .main a {
+    font-size: 20px;
+  }
+}
 #pageslide ul .main:before {
   content: '';
   position: absolute;
@@ -351,6 +361,11 @@ header .fullheight .scrolldown {
 #pageslide ul .main:hover:after {
   width: 100%;
 }
+@media (max-width: 650px) {
+  #pageslide ul .main:hover:after {
+    display: none;
+  }
+}
 
 .lateral {
   background: url("../images/collapse.png") no-repeat;
@@ -367,6 +382,11 @@ header .fullheight .scrolldown {
   z-index: 99999;
 }
 
+@media (max-width: 650px) {
+  .lateral.abierto {
+    right: 250px;
+  }
+}
 #menu-launch {
   width: 50px;
   height: 50px;
