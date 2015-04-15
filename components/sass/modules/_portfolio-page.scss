@@ -47,14 +47,15 @@
                 padding-top: 30px;
             }
         }
+        
         @include breakpoint (min-width 1500px){
-            left: 15%;
+            left: 15%!important;
         }
         @include breakpoint (min-width 1600px){
-            left: 3%;
+            left: 3%!important;
         }
         @include breakpoint (min-width 1750px){
-            left: 8%;
+            left: 8%!important;
         }
         
         

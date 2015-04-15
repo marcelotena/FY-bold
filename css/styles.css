@@ -1287,17 +1287,17 @@ header .fullheight .scrolldown {
 }
 @media (min-width: 1500px) {
   #portfolio-page #masonry-portfolio {
-    left: 15%;
+    left: 15% !important;
   }
 }
 @media (min-width: 1600px) {
   #portfolio-page #masonry-portfolio {
-    left: 3%;
+    left: 3% !important;
   }
 }
 @media (min-width: 1750px) {
   #portfolio-page #masonry-portfolio {
-    left: 8%;
+    left: 8% !important;
   }
 }
 #portfolio-page #masonry-portfolio .yellow {

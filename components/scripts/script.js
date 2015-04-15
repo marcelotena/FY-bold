@@ -50,7 +50,7 @@ $(function() {
             if (isRetina()||isHighDensity()){
 
             }else{
-            console.log(isRetina());
+            
             var wheight = $(window).height(), //get height of the window
             wwidth = $(window).width(); //get window width
 
@@ -399,6 +399,21 @@ $(function() {
             percentPosition: true
         });
         
+        function centraPortfolio() {
+            $('#portfolio-page #masonry-portfolio').css('left', wwidth/2-540);
+        }
+        function centraPortfolioMobile() {
+            $('#portfolio-page #masonry-portfolio').css('left', wwidth/2-270);
+        }
+        
+        if ((wwidth<=1499-20)&&(wwidth>1051)) {centraPortfolio();}
+        if ((wwidth<=1051)&&(wwidth>545-20)) {centraPortfolioMobile();}
+        $(window).resize(function() {
+            wwidth = $(window).width(); //get window width
+            if ((wwidth<=1499-20)&&(wwidth>1051)) {centraPortfolio();}
+            if ((wwidth<=1051)&&(wwidth>545-20)) {centraPortfolioMobile();}
+        });
+    
     }//si no es la página principal...
 
     //preloader
