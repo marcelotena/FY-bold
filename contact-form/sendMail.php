@@ -12,11 +12,7 @@ if(trim($_POST['name']) == '') {
 	$name = trim($_POST['name']);
 }
 
-if (!isset($_POST['condiciones'])) {
-    $hasError = true;
-    $message = "Debes leer y estar de acuerdo con el Aviso Legal antes de enviar los datos del formulario.";
-    echo "<script type='text/javascript'>alert('$message');</script>";
-}
+
 
 //Check to make sure that the last name field is not empty
 /*if(trim($_POST['contactlast']) == '') {
@@ -67,7 +63,10 @@ EOD;
         echo "KO";
     }
 } else { //If errors are found
-	echo '<p class="error">Por favor comprueba que has rellenado todos los campos con información válida y prueba de nuevo. Gracias.</p>';
+    echo <<<EOD
+<div id="success" class="sent success"><p><img src="../images/logo-dark.png" style="width:125px;height:80px;"></p><p style="color:#002f40;margin-top:30px;font-size: large;font-family: Arial, Helvetica, sans-serif;">Por favor comprueba que has rellenado todos los campos con informaci&oacute;n v&acute;lida y aceptado el Aviso Legal. Gracias.</p><br>
+    <p><a href="index.html" onClick="history.back();return false;" style="color:#002f40;font-family: Arial, Helvetica, sans-serif;">Volver a Fast&amp;Yours</a></p></div>
+EOD;
 } 
  
  ?>
