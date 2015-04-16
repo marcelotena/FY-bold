@@ -3,6 +3,8 @@
 
 #services {
     position: relative;
+    display: block;
+    min-height: 1000px;
     #brand-dark {
         position: fixed;
         display: block;
@@ -35,6 +37,8 @@
             display: block;
             float: left;
             color: $blue;
+            margin-top: 20px;
+            margin-bottom: 25px;
             a, h3 {
                 color: $blue;
                 font: $mainFont;
@@ -83,7 +87,7 @@
         position: absolute;
         bottom: 0;
         
-        .dft-btn {
+        h4.titulo {
             margin: 30px;
         }//workflow button
 

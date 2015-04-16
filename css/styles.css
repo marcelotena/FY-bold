@@ -394,6 +394,8 @@ header .fullheight .scrolldown {
 
 #services {
   position: relative;
+  display: block;
+  min-height: 1000px;
 }
 #services #brand-dark {
   position: fixed;
@@ -450,6 +452,8 @@ header .fullheight .scrolldown {
   display: block;
   float: left;
   color: #0c00ed;
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 #services #serviceslist li a, #services #serviceslist li h3 {
   color: #0c00ed;
@@ -513,7 +517,7 @@ header .fullheight .scrolldown {
   position: absolute;
   bottom: 0;
 }
-#services #metodologia .dft-btn {
+#services #metodologia h4.titulo {
   margin: 30px;
 }
 #services #metodologia #workflow {
