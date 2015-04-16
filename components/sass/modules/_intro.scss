@@ -17,6 +17,9 @@ header {
         @include breakpoint (max-width $small) {
             @include backImage('../images/back-image-small.jpg');
         }
+        @include breakpoint (max-width $smallest) {
+            @include backImage('../images/back-image-smaller.jpg');
+        }
         padding: 20px;
 
         h1 {
@@ -49,7 +52,7 @@ header {
             position: relative;
             margin: 0 auto;
             @include breakpoint (max-width $small) {
-                top: 30px!important;
+                top: -30px!important;
             }
         }
         

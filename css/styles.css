@@ -228,6 +228,15 @@ header .fullheight {
     background-size: cover;
   }
 }
+@media (max-width: 400px) {
+  header .fullheight {
+    background: url("../images/back-image-smaller.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
 header .fullheight h1 {
   display: block;
   color: #ffffff;
@@ -264,7 +273,7 @@ header .fullheight .welcome-msg {
 }
 @media (max-width: 650px) {
   header .fullheight .welcome-msg {
-    top: 30px !important;
+    top: -30px !important;
   }
 }
 header .fullheight .scrolldown {
