@@ -2376,6 +2376,7 @@ $(function() {
 
     
     if (wwidth<951) {
+        $('#contact').removeClass('fullheight');
         if (isRetina()||isHighDensity()){
             $('.active-column').css('height', 'auto');
             var projectHeight = $('.active-column .project:nth-child(1)').height();
@@ -2468,7 +2469,10 @@ $(function() {
     
     
     $(window).resize(function() {
-        
+        var wwidth = $(window).width(); //get window width
+        if (wwidth<950) {
+            $('#contact').removeClass('fullheight');
+        }else{$('#contact').addClass('fullheight');}
     });//window resize
     
     //CONTACT FORM

@@ -978,6 +978,11 @@ header .fullheight .scrolldown {
   /* AVISO LEGAL */
   /* BT DARK */
 }
+@media (max-width: 950px) {
+  #contact {
+    min-height: 930px;
+  }
+}
 #contact a {
   color: #0c00ed;
 }
