@@ -11,6 +11,12 @@ header {
     }
     .fullheight {
         @include backImage('../images/back-image-bg.jpg');
+        @include breakpoint (max-width $medium) {
+            @include backImage('../images/back-image-medium.jpg');
+        }
+        @include breakpoint (max-width $small) {
+            @include backImage('../images/back-image-small.jpg');
+        }
         padding: 20px;
 
         h1 {
@@ -18,12 +24,13 @@ header {
             color: $light;
             text-align: center;
             font-weight: $regular;
-            font-size: 2em;
+            font-size: 1.5em;
             line-height: 1.3;
             padding: 100px 0;
             margin-bottom: 100px;
             max-width: 1000px;
             margin: 0 auto;
+            
             @include breakpoint(min-width $small) {
                 font-size: 2.5em;
                 padding: 0;
@@ -41,6 +48,9 @@ header {
         .welcome-msg {
             position: relative;
             margin: 0 auto;
+            @include breakpoint (max-width $small) {
+                top: 30px!important;
+            }
         }
         
         .scrolldown {
