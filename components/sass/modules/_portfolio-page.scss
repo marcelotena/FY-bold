@@ -43,6 +43,7 @@
             @include border-radius (10px);
             img {
                 width: 100%;
+                max-height: 491px;
                 padding: 20px;
                 padding-top: 30px;
             }
@@ -81,7 +82,25 @@
         }//bluenet
         .bluecreative {
             background: $bluecreative;
-        }//bluenet
+        }//bluecreative
+        .bluemodeon {
+            background: $bluemodeon;
+        }//bluemodeon
+        .burdeos {
+            background: $burdeos;
+        }//burdeos
+        .coral {
+            background: $coral;
+        }//coral
+        .brown {
+            background: $brown;
+        }//brown
+        .lightgreen {
+            background: $lightgreen;
+        }//lightgreen
+        .darkpurple {
+            background: $darkpurple;
+        }//darkpurple
     }//portfolio masonry grid 
     #contact {
         background: $light;
